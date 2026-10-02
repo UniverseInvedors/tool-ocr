@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image to Text OCR — Free Online OCR Tool | Extract Text from Images | Universe Tools</title>
+  <meta name="description" content="Extract text from images free online. Upload a photo and convert it to text instantly in your browser. Supports 100+ languages. No file upload to server — 100% private." />
+  <meta name="keywords" content="image to text online free, OCR tool free, extract text from image, photo to text converter, tesseract OCR online, free text recognition" />
+  <link rel="canonical" href="https://ocr.universeinvedors.tech/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Image to Text OCR — Free Online Text Extraction" />
+  <meta property="og:description" content="Convert images to text free online. 100+ languages, runs in browser, no file upload. Completely private." />
+  <meta property="og:url" content="https://ocr.universeinvedors.tech/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0d1117" />
+  <link rel="icon" href="https://universeinvedors.tech/favicon.ico" sizes="any" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Image to Text OCR","description":"Free online OCR tool. Extract text from images in your browser. 100+ languages. Powered by Tesseract.js.","url":"https://ocr.universeinvedors.tech","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <meta name="google-adsense-account" content="ca-pub-8759032363251002" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759032363251002" crossorigin="anonymous"></script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0d1117;--surface:#161b22;--card:#141b28;--border:rgba(255,255,255,.08);--text:#e6edf3;--muted:#8b949e;--green:#10b981;--font:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',monospace}
+    body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100dvh;display:flex;flex-direction:column}
+    .topbar{display:flex;align-items:center;gap:.75rem;padding:.6rem 1rem;border-bottom:1px solid var(--border);background:rgba(13,17,23,.95);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100}
+    .logo{font-size:.85rem;font-weight:700}
+    .badge{font-size:.68rem;font-weight:700;padding:.2rem .6rem;border-radius:100px;background:rgba(16,185,129,.1);color:var(--green);border:1px solid rgba(16,185,129,.25)}
+    .container{max-width:860px;margin:0 auto;padding:2rem 1rem;flex:1;width:100%}
+    h1{font-size:1.6rem;font-weight:800;margin-bottom:.5rem;letter-spacing:-.03em}
+    .subtitle{color:var(--muted);font-size:.9rem;margin-bottom:2rem;line-height:1.6}
+    .privacy-note{padding:.75rem 1rem;border-radius:10px;background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.15);font-size:.8rem;color:var(--green);margin-bottom:1.5rem;display:flex;align-items:center;gap:.5rem}
+    .lang-row{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;flex-wrap:wrap}
+    .lang-row label{font-size:.8rem;font-weight:600;color:var(--muted)}
+    select{padding:.45rem .75rem;border-radius:8px;background:var(--surface);border:1px solid var(--border);color:var(--text);font-size:.85rem;font-family:inherit;outline:none;cursor:pointer}
+    select:focus{border-color:var(--green)}
+    .drop-zone{border:2px dashed var(--border);border-radius:16px;padding:3rem 2rem;text-align:center;cursor:pointer;transition:all .2s;background:var(--card)}
+    .drop-zone:hover,.drop-zone.drag{border-color:var(--green);background:rgba(16,185,129,.04)}
+    .drop-icon{font-size:3rem;margin-bottom:.75rem}
+    .drop-zone h2{font-size:1rem;font-weight:600;margin-bottom:.4rem}
+    .drop-zone p{font-size:.8rem;color:var(--muted)}
+    .progress-area{margin-top:1.5rem;padding:1.25rem;border-radius:12px;background:var(--card);border:1px solid var(--border)}
+    .progress-bar{height:6px;border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden;margin:.75rem 0}
+    .progress-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--green),#06b6d4);transition:width .3s}
+    .result-area{margin-top:1.5rem}
+    .result-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem}
+    .result-header h2{font-size:.9rem;font-weight:600}
+    .result-actions{display:flex;gap:.4rem}
+    .btn{padding:.4rem .9rem;border-radius:8px;font-size:.78rem;font-weight:600;border:none;cursor:pointer;transition:all .15s}
+    .btn-green{background:var(--green);color:#000}
+    .btn-green:hover{background:#0ea371}
+    .btn-ghost{background:rgba(255,255,255,.07);color:var(--muted);border:1px solid var(--border)}
+    .btn-ghost:hover{color:var(--text);background:rgba(255,255,255,.12)}
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .result-grid img{width:100%;border-radius:12px;object-fit:contain;max-height:280px;border:1px solid var(--border)}
+    textarea.result-text{width:100%;height:280px;padding:.85rem;border-radius:12px;background:var(--surface);border:1px solid var(--border);color:var(--text);font-family:var(--mono);font-size:.82rem;resize:vertical;outline:none}
+    .error-msg{padding:1rem;border-radius:10px;background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);color:#f87171;font-size:.82rem;margin-top:1rem}
+    .ad-slot{padding:.5rem;text-align:center;border-top:1px solid var(--border);margin-top:2rem}
+    @media(max-width:580px){.result-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">🔍 <a href="https://universeinvedors.tech/tools" style="color:inherit;text-decoration:none">Universe Tools</a> / Image to Text (OCR)</div>
+  <span class="badge">🔒 100% Local</span>
+</header>
+
+<div class="container">
+  <h1>Image to Text — Free OCR Online</h1>
+  <p class="subtitle">Upload any image containing text and extract it instantly. Supports printed text in 100+ languages. Works entirely in your browser — your files are never uploaded to any server.</p>
+
+  <div class="privacy-note">🔒 <strong>Privacy guaranteed:</strong> All processing happens locally using WebAssembly. Nothing leaves your device.
+  </div>
+
+  <div class="lang-row">
+    <label>Language:</label>
+    <select id="lang">
+      <option value="eng">English</option>
+      <option value="hin">Hindi</option>
+      <option value="spa">Spanish</option>
+      <option value="fra">French</option>
+      <option value="deu">German</option>
+      <option value="por">Portuguese</option>
+      <option value="chi_sim">Chinese (Simplified)</option>
+      <option value="jpn">Japanese</option>
+      <option value="ara">Arabic</option>
+      <option value="rus">Russian</option>
+      <option value="kor">Korean</option>
+    </select>
+  </div>
+
+  <div id="dropZone" class="drop-zone" onclick="document.getElementById('fileInput').click()"
+    ondrop="onDrop(event)" ondragover="onDragOver(event)" ondragleave="onDragLeave(event)">
+    <div class="drop-icon">🖼️</div>
+    <h2>Drop an image here or click to browse</h2>
+    <p>Supports JPG, PNG, WEBP, GIF · Clear printed text gives best results</p>
+  </div>
+  <input type="file" id="fileInput" accept="image/*" style="display:none" onchange="handleFile(this.files[0])">
+
+  <div id="progressArea" class="progress-area" style="display:none">
+    <p id="progressMsg" style="font-size:.85rem;margin-bottom:.25rem">Loading OCR engine…</p>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <p style="font-size:.75rem;color:var(--muted)">Processing in your browser — no upload. May take a moment for large images.</p>
+  </div>
+
+  <div id="resultArea" class="result-area" style="display:none">
+    <div class="result-header">
+      <h2 id="wordCount">Extracted text</h2>
+      <div class="result-actions">
+        <button class="btn btn-ghost" onclick="resetAll()">New image</button>
+        <button class="btn btn-ghost" onclick="copyResult()">Copy text</button>
+        <button class="btn btn-green" onclick="downloadResult()">↓ Download .txt</button>
+      </div>
+    </div>
+    <div class="result-grid">
+      <img id="previewImg" src="" alt="Source image" />
+      <textarea class="result-text" id="resultText" readonly></textarea>
+    </div>
+  </div>
+
+  <div id="errorMsg" class="error-msg" style="display:none"></div>
+
+  <!-- How it works -->
+  <section style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)">
+    <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:1rem">How to use this OCR tool</h2>
+    <ol style="color:var(--muted);font-size:.88rem;line-height:2;padding-left:1.25rem">
+      <li>Select the language of text in your image</li>
+      <li>Upload your image (drag & drop or click to browse)</li>
+      <li>Wait a few seconds while text is recognised locally in your browser</li>
+      <li>Copy the extracted text or download it as a .txt file</li>
+    </ol>
+    <h3 style="font-size:.95rem;font-weight:700;margin:1.5rem 0 .5rem">Tips for best results</h3>
+    <ul style="color:var(--muted);font-size:.88rem;line-height:2;padding-left:1.25rem">
+      <li>Use clear, high-contrast images with dark text on light background</li>
+      <li>Avoid blurry, skewed or heavily compressed images</li>
+      <li>Printed text gives more accurate results than handwriting</li>
+      <li>Higher resolution images produce better output</li>
+    </ul>
+  </section>
+</div>
+
+<div class="ad-slot" aria-label="Advertisement">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8759032363251002" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<script>
+let currentImgSrc = ''
+let currentText = ''
+
+function onDragOver(e) { e.preventDefault(); document.getElementById('dropZone').classList.add('drag') }
+function onDragLeave() { document.getElementById('dropZone').classList.remove('drag') }
+function onDrop(e) { e.preventDefault(); document.getElementById('dropZone').classList.remove('drag'); handleFile(e.dataTransfer.files[0]) }
+
+function handleFile(file) {
+  if (!file || !file.type.startsWith('image/')) {
+    showError('Please upload an image file (JPG, PNG, WEBP, GIF).')
+    return
+  }
+  currentImgSrc = URL.createObjectURL(file)
+  document.getElementById('previewImg').src = currentImgSrc
+  document.getElementById('dropZone').style.display = 'none'
+  document.getElementById('progressArea').style.display = 'block'
+  document.getElementById('resultArea').style.display = 'none'
+  document.getElementById('errorMsg').style.display = 'none'
+  processOCR(file)
+}
+
+async function processOCR(file) {
+  const lang = document.getElementById('lang').value
+  try {
+    const { createWorker } = await import('https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.esm.min.js')
+    const worker = await createWorker(lang, 1, {
+      logger: m => {
+        if (m.status === 'recognizing text') {
+          const pct = Math.round(m.progress * 100)
+          document.getElementById('progressMsg').textContent = `Recognising text… ${pct}%`
+          document.getElementById('progressFill').style.width = pct + '%'
+        } else {
+          document.getElementById('progressMsg').textContent = m.status
+        }
+      }
+    })
+    const { data: { text } } = await worker.recognize(file)
+    await worker.terminate()
+    currentText = text
+    const words = text.trim().split(/\s+/).filter(Boolean).length
+    document.getElementById('wordCount').textContent = `✅ Extracted ${words} words`
+    document.getElementById('resultText').value = text
+    document.getElementById('progressArea').style.display = 'none'
+    document.getElementById('resultArea').style.display = 'block'
+  } catch(e) {
+    document.getElementById('progressArea').style.display = 'none'
+    showError(e.message || 'OCR failed. Try a clearer image.')
+  }
+}
+
+function showError(msg) {
+  const el = document.getElementById('errorMsg')
+  el.textContent = msg
+  el.style.display = 'block'
+  document.getElementById('dropZone').style.display = 'block'
+}
+
+function copyResult() {
+  navigator.clipboard.writeText(currentText).then(() => {
+    const b = document.querySelector('.btn-ghost:last-child')
+    if (b) { b.textContent = 'Copied!'; setTimeout(() => b.textContent = 'Copy text', 1500) }
+  })
+}
+
+function downloadResult() {
+  const a = document.createElement('a')
+  a.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(currentText)
+  a.download = 'extracted-text.txt'
+  a.click()
+}
+
+function resetAll() {
+  currentImgSrc = ''; currentText = ''
+  document.getElementById('dropZone').style.display = 'block'
+  document.getElementById('resultArea').style.display = 'none'
+  document.getElementById('fileInput').value = ''
+}
+</script>
+</body>
+</html>
