@@ -1,359 +1,426 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Image to Text OCR Free — Extract Text from Images Online | 100+ Languages | Universe Invedors Tools</title>
-<meta name="description" content="Extract text from images free online. Upload photo or PDF and convert to text. Supports 100+ languages. Tesseract.js powered. Runs in browser — no upload, 100% private."/>
-<meta name="keywords" content="image to text online free,OCR tool free,extract text from image,photo to text converter,scan to text,tesseract OCR online,PDF to text free"/>
-<link rel="canonical" href="https://ocr.universeinvedors.tech/"/>
-<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>
-<meta name="author" content="Universe Invedors"/>
-<meta property="og:title" content="Image to Text OCR — Free Online Text Extraction"/>
-<meta property="og:description" content="Convert images to text free online. 100+ languages. Runs in browser — no file upload, 100% private."/>
-<meta property="og:url" content="https://ocr.universeinvedors.tech/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:image" content="https://universeinvedors.tech/og-image.jpg"/>
-<meta property="og:site_name" content="Universe Invedors Tools"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://universeinvedors.tech/og-image.jpg"/>
-<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
-<link rel="icon" href="https://universeinvedors.tech/favicon.ico" sizes="any"/>
-<meta name="theme-color" content="#090c13"/>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>OCR Studio — Image to Text, PDF Text Extraction, Batch OCR, Table Detection | Universe Invedors</title>
+<meta name="description" content="Complete OCR platform. Image to text, PDF text extraction, batch processing, table detection, handwriting recognition. 15 languages, confidence scores, copy/download results. 100% browser-based."/>
+<meta name="keywords" content="OCR online free,image to text free,PDF text extractor,batch OCR tool,table detection OCR,handwriting recognition online,Tesseract.js"/>
+<link rel="canonical" href="https://ocr.universeinvedors.tech/"/><meta name="robots" content="index,follow"/><meta name="author" content="Universe Invedors"/>
+<meta property="og:title" content="OCR Studio — Image to Text, PDF Extract, Batch OCR, Table Detection"/><meta property="og:url" content="https://ocr.universeinvedors.tech/"/><meta property="og:type" content="website"/><meta property="og:image" content="https://universeinvedors.tech/og-image.jpg"/><meta property="og:site_name" content="Universe Invedors Tools"/>
+<meta name="twitter:card" content="summary_large_image"/><meta name="twitter:image" content="https://universeinvedors.tech/og-image.jpg"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="https://universeinvedors.tech/favicon.ico" sizes="any"/><meta name="theme-color" content="#090c13"/>
 <meta name="google-adsense-account" content="ca-pub-8759032363251002"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759032363251002" crossorigin="anonymous"></script>
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Image to Text OCR","url":"https://ocr.universeinvedors.tech","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Universe Invedors","url":"https://universeinvedors.tech"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Universe Invedors","item":"https://universeinvedors.tech"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://universeinvedors.tech/tools"},{"@type":"ListItem","position":3,"name":"Image to Text OCR","item":"https://ocr.universeinvedors.tech"}]}]</script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#090c13;--surf:#0f1420;--elev:#141b28;--card:#1a2235;--inp:#111827;
-  --t1:#f0f4ff;--t2:#a8b5cc;--t3:#64748b;--t4:#3d4f6e;
-  --acc:#10b981;--acc-h:#34d399;--acc-glow:rgba(16,185,129,.25);
-  --blue:#3b82f6;--violet:#8b5cf6;
-  --border:rgba(255,255,255,.07);--bh:rgba(255,255,255,.14);
-  --font:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
-  --mono:'JetBrains Mono','Fira Code',Consolas,monospace;
-  --r:10px;--th:52px;--sw:220px;--tr:180ms cubic-bezier(.4,0,.2,1);
-}
-html{font-size:16px;-webkit-text-size-adjust:100%}
-body{font-family:var(--font);background:var(--bg);color:var(--t1);min-height:100dvh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+:root{--bg:#090c13;--surf:#0d1117;--elev:#141b28;--card:#1a2235;--inp:#111827;--t1:#f0f4ff;--t2:#a8b5cc;--t3:#64748b;--t4:#3d4f6e;--acc:#10b981;--acc-h:#34d399;--acc-glow:rgba(16,185,129,.22);--blue:#3b82f6;--violet:#8b5cf6;--border:rgba(255,255,255,.07);--bh:rgba(255,255,255,.13);--font:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',Consolas,monospace;--r:8px;--th:50px;--tr:160ms cubic-bezier(.4,0,.2,1)}
+html{font-size:16px}body{font-family:var(--font);background:var(--bg);color:var(--t1);min-height:100dvh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:3px}
-.tb{height:var(--th);background:rgba(9,12,19,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;padding:0 .85rem;flex-shrink:0;position:sticky;top:0;z-index:200}
-.logo{display:flex;align-items:center;gap:.4rem;font-size:.82rem;font-weight:700;color:var(--t1);text-decoration:none;white-space:nowrap}
-.logo:hover{color:var(--acc-h);text-decoration:none}
+.topbar{height:var(--th);background:rgba(9,12,19,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem;padding:0 .85rem;flex-shrink:0;position:sticky;top:0;z-index:200}
+.logo{font-size:.82rem;font-weight:700;color:var(--t1);text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:.4rem}.logo:hover{color:var(--acc-h);text-decoration:none}
+.etabs{display:flex;gap:.1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r);padding:3px;overflow-x:auto}
+.et{padding:.26rem .65rem;border-radius:6px;font-size:.72rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--t3);white-space:nowrap;transition:all var(--tr)}.et:hover{background:rgba(255,255,255,.06);color:var(--t2)}.et.active{background:var(--acc);color:#000;box-shadow:0 0 10px var(--acc-glow)}
 .sp{flex:1}
-.btn{display:inline-flex;align-items:center;gap:.35rem;padding:.38rem .85rem;border-radius:var(--r);font-size:.75rem;font-weight:600;cursor:pointer;border:none;transition:all var(--tr);white-space:nowrap}
-.bg{background:rgba(255,255,255,.05);color:var(--t2);border:1px solid var(--border)}
-.bg:hover{background:rgba(255,255,255,.09);border-color:var(--bh);color:var(--t1)}
-.bp{background:var(--acc);color:#000}
-.bp:hover{background:var(--acc-h)}
-.bsm{padding:.26rem .6rem;font-size:.68rem}
-.badge{display:inline-flex;align-items:center;gap:.25rem;padding:.18rem .55rem;border-radius:100px;font-size:.67rem;font-weight:700}
-.bg-green{background:rgba(16,185,129,.12);color:var(--acc);border:1px solid rgba(16,185,129,.25)}
-
-.container{max-width:960px;margin:0 auto;padding:2rem 1rem;flex:1;width:100%}
-.hero{text-align:center;margin-bottom:2rem}
-.hero h1{font-size:1.7rem;font-weight:800;letter-spacing:-.03em;margin-bottom:.5rem}
-.hero p{color:var(--t2);font-size:.9rem;max-width:520px;margin:0 auto .85rem}
-.privacy-bar{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;border-radius:100px;background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.18);font-size:.78rem;color:var(--acc)}
-
-/* Mode tabs */
-.mode-tabs{display:flex;gap:.3rem;margin-bottom:1.5rem;justify-content:center;flex-wrap:wrap}
-.mt{padding:.45rem 1.1rem;border-radius:var(--r);font-size:.8rem;font-weight:600;cursor:pointer;border:1px solid var(--border);background:var(--surf);color:var(--t2);transition:all var(--tr)}
-.mt:hover{border-color:var(--bh);color:var(--t1)}
-.mt.active{background:rgba(16,185,129,.12);border-color:rgba(16,185,129,.35);color:var(--acc-h)}
-
+.btn{display:inline-flex;align-items:center;gap:.35rem;padding:.32rem .75rem;border-radius:var(--r);font-size:.73rem;font-weight:600;cursor:pointer;border:none;transition:all var(--tr);white-space:nowrap}
+.bg{background:rgba(255,255,255,.05);color:var(--t2);border:1px solid var(--border)}.bg:hover{background:rgba(255,255,255,.09);border-color:var(--bh);color:var(--t1)}
+.bp{background:var(--acc);color:#000}.bp:hover{background:var(--acc-h)}
+.bsm{padding:.22rem .55rem;font-size:.68rem}
+.badge-priv{display:inline-flex;align-items:center;gap:.25rem;padding:.2rem .55rem;border-radius:100px;font-size:.67rem;font-weight:700;background:rgba(16,185,129,.1);color:var(--acc);border:1px solid rgba(16,185,129,.25)}
+.container{max-width:1000px;margin:0 auto;padding:1.5rem 1rem;flex:1;width:100%}
+/* Mode panels */
+.mode-panel{display:none}.mode-panel.active{display:block}
 /* Settings row */
-.settings-row{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;margin-bottom:1.5rem;padding:1rem;background:var(--surf);border-radius:var(--r);border:1px solid var(--border)}
-.settings-row label{font-size:.75rem;font-weight:600;color:var(--t3)}
-.settings-row select{padding:.4rem .65rem;background:var(--inp);border:1px solid var(--border);border-radius:var(--r);color:var(--t1);font-size:.8rem;outline:none}
-.settings-row select:focus{border-color:rgba(16,185,129,.5)}
-
+.settings-bar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;padding:.75rem;background:var(--surf);border:1px solid var(--border);border-radius:var(--r);margin-bottom:1.25rem}
+.settings-bar label{font-size:.75rem;font-weight:600;color:var(--t3)}
+.settings-bar select,.settings-bar input[type=checkbox]{background:var(--inp);border:1px solid var(--border);border-radius:6px;color:var(--t1);font-size:.8rem;outline:none;padding:.35rem .55rem}
 /* Drop zone */
-.dropzone{border:2px dashed var(--border);border-radius:14px;padding:3rem 2rem;text-align:center;cursor:pointer;transition:all var(--tr);background:var(--surf);margin-bottom:1.25rem}
-.dropzone:hover,.dropzone.drag{border-color:var(--acc);background:rgba(16,185,129,.04)}
-.dz-icon{font-size:3rem;margin-bottom:.75rem}
-.dropzone h2{font-size:1rem;font-weight:700;margin-bottom:.35rem}
-.dropzone p{font-size:.8rem;color:var(--t2)}
-
+.dz{border:2px dashed var(--border);border-radius:14px;padding:2.5rem 2rem;text-align:center;cursor:pointer;transition:all var(--tr);background:var(--surf);margin-bottom:1.25rem}
+.dz:hover,.dz.drag{border-color:var(--acc);background:rgba(16,185,129,.04)}
 /* Progress */
-.progress-card{padding:1.25rem;border-radius:var(--r);background:var(--card);border:1px solid var(--border);margin-bottom:1.25rem}
-.progress-bar{height:5px;border-radius:3px;background:rgba(255,255,255,.07);overflow:hidden;margin:.65rem 0}
-.progress-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--acc),#06b6d4);transition:width .3s}
-.progress-msg{font-size:.82rem;color:var(--t2)}
-
+.prog-card{padding:1rem;border-radius:var(--r);background:var(--card);border:1px solid var(--border);margin-bottom:1.25rem}
+.prog-bar{height:5px;border-radius:3px;background:rgba(255,255,255,.07);overflow:hidden;margin:.5rem 0}
+.prog-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--acc),var(--blue));transition:width .3s}
 /* Result */
-.result-card{margin-bottom:1.25rem}
-.result-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem}
-.result-header h2{font-size:.92rem;font-weight:700;color:var(--acc-h)}
-.result-actions{display:flex;gap:.35rem;flex-wrap:wrap}
-.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.result-grid img{width:100%;border-radius:12px;object-fit:contain;max-height:300px;border:1px solid var(--border);background:var(--bg)}
-.result-text{width:100%;height:300px;padding:.85rem;border-radius:12px;background:var(--card);border:1px solid var(--border);color:var(--t1);font-family:var(--mono);font-size:.8rem;resize:vertical;outline:none;line-height:1.65}
-
-/* Word count */
-.word-stats{display:flex;flex-wrap:wrap;gap:.4rem .9rem;margin-top:.75rem}
-.stat{font-size:.72rem;color:var(--t3)}.stat span{color:var(--acc-h);font-weight:700}
-
-.err-msg{padding:1rem;border-radius:var(--r);background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);color:#f87171;font-size:.82rem;margin-bottom:1rem}
-
-.info-section{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border)}
-.info-section h2{font-size:1rem;font-weight:700;margin-bottom:.75rem;color:var(--t1)}
-.info-section ul{color:var(--t2);font-size:.85rem;line-height:2;padding-left:1.25rem}
-.info-section ul li::marker{color:var(--acc)}
-
-.seo-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.3rem .75rem;padding:.4rem .85rem;border-top:1px solid var(--border);background:var(--surf);font-size:.67rem;color:var(--t3)}
-.seo-footer a{color:var(--t3)}.seo-footer a:hover{color:var(--t2)}
-.sfl{display:flex;flex-wrap:wrap;gap:.2rem .6rem}
-.toasts{position:fixed;bottom:1rem;right:1rem;z-index:999;display:flex;flex-direction:column;gap:.4rem;pointer-events:none}
-.toast{padding:.55rem .9rem;border-radius:var(--r);font-size:.75rem;font-weight:600;background:var(--card);border:1px solid var(--border);color:var(--t1);box-shadow:0 8px 32px rgba(0,0,0,.5);animation:tin .22s ease}
-.toast.ok{border-color:rgba(16,185,129,.3);color:var(--acc)}.toast.err{border-color:rgba(239,68,68,.3);color:#f87171}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem}
+.result-grid img{width:100%;border-radius:10px;object-fit:contain;max-height:320px;border:1px solid var(--border)}
+.result-text{width:100%;height:320px;padding:.85rem;border-radius:10px;background:var(--card);border:1px solid var(--border);color:var(--t1);font-family:var(--mono);font-size:.8rem;resize:vertical;outline:none;line-height:1.65}
+.stats-row{display:flex;flex-wrap:wrap;gap:.4rem .9rem;font-size:.72rem;color:var(--t3);margin-top:.5rem}
+.stat-val{color:var(--acc-h);font-weight:700}
+/* Batch */
+.batch-list{display:flex;flex-direction:column;gap:.35rem}
+.batch-item{display:flex;align-items:center;gap:.65rem;padding:.6rem .75rem;border-radius:var(--r);background:var(--card);border:1px solid var(--border)}
+.batch-icon{font-size:1rem;width:20px;text-align:center;flex-shrink:0}
+.batch-name{flex:1;font-size:.8rem;color:var(--t1)}
+.batch-status{font-size:.72rem;padding:.15rem .45rem;border-radius:4px;font-weight:600}
+.st-pending{background:rgba(100,116,139,.12);color:var(--t3)}
+.st-processing{background:rgba(6,182,212,.12);color:#22d3ee}
+.st-done{background:rgba(16,185,129,.12);color:var(--acc)}
+.st-err{background:rgba(239,68,68,.12);color:#f87171}
+/* Cleanup panel */
+.cleanup-area{display:flex;gap:.75rem;flex:1;overflow:hidden}
+.cleanup-col{flex:1;display:flex;flex-direction:column}
+.cltitle{font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--t3);margin-bottom:.4rem}
+.cltextarea{flex:1;width:100%;padding:.75rem;background:var(--inp);border:1px solid var(--border);border-radius:var(--r);color:var(--t1);font-family:var(--mono);font-size:.8rem;resize:none;outline:none;line-height:1.65;min-height:200px}
+.cltextarea:focus{border-color:rgba(16,185,129,.4)}
+.cleanup-btns{display:flex;flex-wrap:wrap;gap:.35rem;margin:.5rem 0}
+/* Info */
+.info-sect{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.info-sect h2{font-size:.95rem;font-weight:700;margin-bottom:.6rem}
+.info-sect ul{color:var(--t2);font-size:.85rem;line-height:1.95;padding-left:1.25rem}
+.seo-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.3rem .75rem;padding:.35rem .75rem;border-top:1px solid var(--border);background:var(--surf);font-size:.65rem;color:var(--t3);flex-shrink:0}
+.seo-footer a{color:var(--t3)}.seo-footer a:hover{color:var(--t2)}.sf-links{display:flex;flex-wrap:wrap;gap:.2rem .6rem}
+.toasts{position:fixed;bottom:2.5rem;right:1rem;z-index:999;display:flex;flex-direction:column;gap:.4rem;pointer-events:none}
+.toast{padding:.5rem .85rem;border-radius:var(--r);font-size:.75rem;font-weight:600;background:var(--card);border:1px solid var(--border);color:var(--t1);box-shadow:0 6px 24px rgba(0,0,0,.5);animation:tin .2s ease}
+.toast.ok{border-color:rgba(16,185,129,.35);color:var(--acc)}.toast.err{border-color:rgba(239,68,68,.35);color:#f87171}.toast.info{border-color:rgba(59,130,246,.35);color:#60a5fa}
 @keyframes tin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:600px){.result-grid{grid-template-columns:1fr}.result-text{height:220px}}
 </style>
 </head>
 <body>
-
-<header class="tb">
-  <a href="https://universeinvedors.tech/tools" class="logo">🔍 Universe Tools <span style="color:var(--t4);font-weight:400;font-size:.75rem">/</span> <span style="color:var(--acc-h)">Image to Text OCR</span></a>
+<header class="topbar">
+  <a href="https://universeinvedors.tech/tools" class="logo">🔍 <span style="color:var(--acc-h)">OCR Studio</span></a>
+  <div class="etabs">
+    <button class="et active" onclick="setMode('single',this)">🖼 Image OCR</button>
+    <button class="et" onclick="setMode('batch',this)">📂 Batch OCR</button>
+    <button class="et" onclick="setMode('pdf',this)">📄 PDF Extract</button>
+    <button class="et" onclick="setMode('cleanup',this)">✨ Text Cleanup</button>
+  </div>
   <div class="sp"></div>
-  <span class="badge bg-green">🔒 100% Local — No Upload</span>
+  <span class="badge-priv">🔒 100% Local — No Upload</span>
 </header>
 
 <div class="container">
-  <div class="hero">
-    <h1>Extract Text from Images Free</h1>
-    <p>Upload an image or PDF and extract all text instantly. Supports 100+ languages. Powered by Tesseract.js — everything runs in your browser.</p>
-    <span class="badge bg-green" style="font-size:.78rem;padding:.35rem .85rem">🔒 Your files never leave your device</span>
-  </div>
-
-  <!-- Mode tabs -->
-  <div class="mode-tabs">
-    <button class="mt active" onclick="setMode('image',this)">🖼 Image OCR</button>
-    <button class="mt" onclick="setMode('multi',this)">📂 Multi-Image</button>
-    <button class="mt" onclick="setMode('url',this)">🔗 Image URL</button>
-  </div>
-
-  <!-- Settings -->
-  <div class="settings-row">
+  <!-- Settings bar (shared) -->
+  <div class="settings-bar">
     <label>Language:</label>
     <select id="lang">
-      <option value="eng">English</option>
-      <option value="hin">Hindi</option>
-      <option value="ben">Bengali</option>
-      <option value="spa">Spanish</option>
-      <option value="fra">French</option>
-      <option value="deu">German</option>
-      <option value="por">Portuguese</option>
-      <option value="ita">Italian</option>
-      <option value="rus">Russian</option>
-      <option value="ara">Arabic</option>
-      <option value="chi_sim">Chinese (Simplified)</option>
-      <option value="chi_tra">Chinese (Traditional)</option>
-      <option value="jpn">Japanese</option>
-      <option value="kor">Korean</option>
-      <option value="tur">Turkish</option>
+      <option value="eng">English</option><option value="hin">Hindi</option><option value="ben">Bengali</option>
+      <option value="spa">Spanish</option><option value="fra">French</option><option value="deu">German</option>
+      <option value="por">Portuguese</option><option value="ita">Italian</option><option value="rus">Russian</option>
+      <option value="ara">Arabic</option><option value="chi_sim">Chinese (Simp)</option>
+      <option value="chi_tra">Chinese (Trad)</option><option value="jpn">Japanese</option>
+      <option value="kor">Korean</option><option value="tur">Turkish</option>
     </select>
-    <label>Output:</label>
-    <select id="output-mode">
-      <option value="text">Plain Text</option>
-      <option value="hocr">hOCR (with positions)</option>
-    </select>
-    <label style="display:flex;align-items:center;gap:.4rem;cursor:pointer">
-      <input type="checkbox" id="preserve-layout" style="accent-color:var(--acc)">
-      <span style="font-size:.78rem;color:var(--t2)">Preserve layout</span>
-    </label>
+    <label style="display:flex;align-items:center;gap:.3rem;cursor:pointer"><input type="checkbox" id="preserve-layout" style="accent-color:var(--acc)"> Preserve layout</label>
+    <label style="display:flex;align-items:center;gap:.3rem;cursor:pointer"><input type="checkbox" id="detect-tables" style="accent-color:var(--acc)"> Detect tables</label>
+    <label style="margin-left:auto;font-size:.72rem;color:var(--t3)">Tesseract.js v5 · WebAssembly</label>
   </div>
 
-  <!-- Drop zone -->
-  <div id="dropzone" class="dropzone"
-    onclick="document.getElementById('file-input').click()"
-    ondragover="event.preventDefault();this.classList.add('drag')"
-    ondragleave="this.classList.remove('drag')"
-    ondrop="event.preventDefault();this.classList.remove('drag');handleFiles(event.dataTransfer.files)">
-    <div class="dz-icon">🖼️</div>
-    <h2>Drop image here or click to browse</h2>
-    <p>JPG, PNG, WEBP, GIF, BMP, TIFF · Clear printed text gives best results</p>
-    <p style="margin-top:.5rem;font-size:.72rem;color:var(--t3)">Tip: Higher resolution images produce more accurate results</p>
-  </div>
-
-  <!-- URL mode input -->
-  <div id="url-input" style="display:none;margin-bottom:1.25rem">
-    <div style="display:flex;gap:.5rem">
-      <input type="text" id="image-url" placeholder="https://example.com/image.jpg" style="flex:1;padding:.5rem .75rem;background:var(--inp);border:1px solid var(--border);border-radius:var(--r);color:var(--t1);font-size:.85rem;outline:none">
-      <button class="btn bp" onclick="processURL()">Extract Text</button>
+  <!-- SINGLE IMAGE MODE -->
+  <div id="mode-single" class="mode-panel active">
+    <div class="dz" id="single-dz"
+      onclick="document.getElementById('single-file').click()"
+      ondragover="event.preventDefault();this.classList.add('drag')"
+      ondragleave="this.classList.remove('drag')"
+      ondrop="event.preventDefault();this.classList.remove('drag');handleSingle(event.dataTransfer.files[0])">
+      <div style="font-size:2.5rem;margin-bottom:.75rem">🖼️</div>
+      <h2 style="font-size:.95rem;font-weight:700;margin-bottom:.35rem">Drop an image here or click to browse</h2>
+      <p style="font-size:.8rem;color:var(--t2)">JPG, PNG, WEBP, GIF, BMP, TIFF · Higher resolution = better accuracy</p>
+      <p style="font-size:.72rem;color:var(--t3);margin-top:.35rem">💡 Tip: Use images with clear, dark text on light background</p>
     </div>
-    <p style="font-size:.72rem;color:var(--t3);margin-top:.35rem">Note: CORS restrictions may prevent some URLs from loading.</p>
-  </div>
-
-  <input type="file" id="file-input" accept="image/*" multiple style="display:none" onchange="handleFiles(this.files)">
-
-  <!-- Progress -->
-  <div id="progress-card" class="progress-card" style="display:none">
-    <p class="progress-msg" id="progress-msg">Loading OCR engine…</p>
-    <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
-    <p style="font-size:.72rem;color:var(--t3);margin-top:.3rem">Processing locally — no upload. Large images may take a moment.</p>
-  </div>
-
-  <!-- Error -->
-  <div id="error-msg" class="err-msg" style="display:none"></div>
-
-  <!-- Result -->
-  <div id="result-area" style="display:none">
-    <div class="result-card">
-      <div class="result-header">
-        <h2 id="result-title">Extracted Text</h2>
-        <div class="result-actions">
-          <button class="btn bg bsm" onclick="resetOCR()">New Image</button>
-          <button class="btn bg bsm" onclick="copyText()">Copy Text</button>
-          <button class="btn bg bsm" onclick="copyHOCR()" id="hocr-btn" style="display:none">Copy hOCR</button>
-          <button class="btn bp bsm" onclick="downloadTXT()">↓ .txt</button>
-          <button class="btn bsm" style="background:var(--blue);color:#fff" onclick="downloadDOCX()">↓ .docx</button>
+    <input type="file" id="single-file" accept="image/*" style="display:none" onchange="handleSingle(this.files[0])">
+    <div id="single-prog" class="prog-card" style="display:none">
+      <p id="single-msg" style="font-size:.82rem;color:var(--t2)">Initialising…</p>
+      <div class="prog-bar"><div class="prog-fill" id="single-fill" style="width:0%"></div></div>
+      <p style="font-size:.7rem;color:var(--t3);margin-top:.25rem">Processing locally — your image never leaves your device</p>
+    </div>
+    <div id="single-result" style="display:none">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem">
+        <h2 id="single-title" style="font-size:.9rem;font-weight:700;color:var(--acc-h)">Extracted Text</h2>
+        <div style="display:flex;gap:.35rem;flex-wrap:wrap">
+          <button class="btn bg bsm" onclick="document.getElementById('single-file').click()">New Image</button>
+          <button class="btn bg bsm" onclick="copyResult('single-out')">Copy Text</button>
+          <button class="btn bg bsm" onclick="downloadTXT('single-out','extracted')">↓ .txt</button>
+          <button class="btn bp bsm" onclick="downloadMarkdown('single-out')">↓ .md</button>
         </div>
       </div>
       <div class="result-grid">
-        <img id="preview-img" src="" alt="Source image"/>
-        <textarea class="result-text" id="result-text" spellcheck="false"></textarea>
+        <img id="single-preview" src="" alt="Source">
+        <textarea class="result-text" id="single-out" spellcheck="false"></textarea>
       </div>
-      <div class="word-stats">
-        <div class="stat">Words: <span id="stat-words">0</span></div>
-        <div class="stat">Characters: <span id="stat-chars">0</span></div>
-        <div class="stat">Lines: <span id="stat-lines">0</span></div>
-        <div class="stat">Confidence: <span id="stat-conf">—</span></div>
+      <div class="stats-row">
+        <span>Words: <span class="stat-val" id="sw">0</span></span>
+        <span>Characters: <span class="stat-val" id="sc">0</span></span>
+        <span>Lines: <span class="stat-val" id="sl">0</span></span>
+        <span>Confidence: <span class="stat-val" id="sconf">—</span></span>
+        <span>Language: <span class="stat-val" id="slang">—</span></span>
       </div>
+    </div>
+    <div id="single-err" style="display:none;padding:.85rem;border-radius:var(--r);background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);color:#f87171;font-size:.82rem;margin-top:.75rem"></div>
+  </div>
+
+  <!-- BATCH MODE -->
+  <div id="mode-batch" class="mode-panel">
+    <div class="dz" id="batch-dz" style="padding:1.5rem"
+      onclick="document.getElementById('batch-file').click()"
+      ondragover="event.preventDefault();this.classList.add('drag')"
+      ondragleave="this.classList.remove('drag')"
+      ondrop="event.preventDefault();this.classList.remove('drag');handleBatch(event.dataTransfer.files)">
+      <div style="font-size:2rem;margin-bottom:.5rem">📂</div>
+      <h2 style="font-size:.9rem;font-weight:700;margin-bottom:.25rem">Drop multiple images here</h2>
+      <p style="font-size:.78rem;color:var(--t2)">Select or drop multiple image files to process them all</p>
+    </div>
+    <input type="file" id="batch-file" accept="image/*" multiple style="display:none" onchange="handleBatch(this.files)">
+    <div id="batch-list" class="batch-list"></div>
+    <div id="batch-actions" style="display:none;margin-top:.75rem;display:flex;gap:.5rem;flex-wrap:wrap">
+      <button class="btn bp" onclick="runBatch()">▶ Process All</button>
+      <button class="btn bg bsm" onclick="downloadAllTXT()">↓ Download All .txt</button>
+      <button class="btn bg bsm" onclick="clearBatch()">Clear</button>
+    </div>
+    <div id="batch-combined" style="display:none;margin-top:1.25rem">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem">
+        <span style="font-size:.82rem;font-weight:600;color:var(--acc-h)">Combined Result</span>
+        <button class="btn bg bsm" onclick="copyResult('batch-out')">Copy All</button>
+      </div>
+      <textarea class="result-text" id="batch-out" style="height:280px" spellcheck="false"></textarea>
     </div>
   </div>
 
-  <!-- Info section -->
-  <section class="info-section">
-    <h2>How to use this OCR tool</h2>
+  <!-- PDF MODE -->
+  <div id="mode-pdf" class="mode-panel">
+    <div class="dz" id="pdf-dz"
+      onclick="document.getElementById('pdf-file').click()"
+      ondragover="event.preventDefault();this.classList.add('drag')"
+      ondragleave="this.classList.remove('drag')"
+      ondrop="event.preventDefault();this.classList.remove('drag');handlePDF(event.dataTransfer.files[0])">
+      <div style="font-size:2.5rem;margin-bottom:.75rem">📄</div>
+      <h2 style="font-size:.95rem;font-weight:700;margin-bottom:.35rem">Drop a PDF here to extract text</h2>
+      <p style="font-size:.8rem;color:var(--t2)">Extracts text from each page. Renders pages as images then runs OCR.</p>
+    </div>
+    <input type="file" id="pdf-file" accept="application/pdf" style="display:none" onchange="handlePDF(this.files[0])">
+    <div id="pdf-prog" class="prog-card" style="display:none">
+      <p id="pdf-msg" style="font-size:.82rem;color:var(--t2)">Loading PDF…</p>
+      <div class="prog-bar"><div class="prog-fill" id="pdf-fill" style="width:0%"></div></div>
+    </div>
+    <div id="pdf-result" style="display:none">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem">
+        <span id="pdf-title" style="font-size:.9rem;font-weight:700;color:var(--acc-h)">PDF Text</span>
+        <div style="display:flex;gap:.35rem">
+          <button class="btn bg bsm" onclick="copyResult('pdf-out')">Copy</button>
+          <button class="btn bp bsm" onclick="downloadTXT('pdf-out','pdf-extracted')">↓ .txt</button>
+        </div>
+      </div>
+      <textarea class="result-text" id="pdf-out" style="height:400px" spellcheck="false"></textarea>
+    </div>
+  </div>
+
+  <!-- CLEANUP MODE -->
+  <div id="mode-cleanup" class="mode-panel">
+    <p style="font-size:.85rem;color:var(--t2);margin-bottom:1rem">Paste OCR output and apply automatic cleanup to remove common scanning artefacts, normalise spacing, fix common errors and improve readability.</p>
+    <div class="cleanup-btns">
+      <button class="btn bg bsm" onclick="cleanup('trim')">Trim whitespace</button>
+      <button class="btn bg bsm" onclick="cleanup('dedup')">Remove duplicate lines</button>
+      <button class="btn bg bsm" onclick="cleanup('normalize')">Normalise spacing</button>
+      <button class="btn bg bsm" onclick="cleanup('remove-special')">Remove special chars</button>
+      <button class="btn bg bsm" onclick="cleanup('fix-newlines')">Fix line breaks</button>
+      <button class="btn bg bsm" onclick="cleanup('numbers')">Fix 0→O, l→1</button>
+      <button class="btn bg bsm" onclick="cleanup('markdown')">→ Markdown</button>
+      <button class="btn bp bsm" onclick="cleanup('all')">✨ Clean All</button>
+    </div>
+    <div class="cleanup-area">
+      <div class="cleanup-col">
+        <div class="cltitle">Input (paste OCR text)</div>
+        <textarea class="cltextarea" id="cleanup-in" placeholder="Paste your OCR output here…"></textarea>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;padding:0 .5rem;color:var(--t3);font-size:1.2rem">→</div>
+      <div class="cleanup-col">
+        <div class="cltitle">Cleaned Output</div>
+        <textarea class="cltextarea" id="cleanup-out" placeholder="Cleaned text will appear here…" readonly></textarea>
+      </div>
+    </div>
+    <div style="display:flex;gap:.4rem;margin-top:.6rem">
+      <button class="btn bg bsm" onclick="copyResult('cleanup-out')">Copy Result</button>
+      <button class="btn bg bsm" onclick="downloadTXT('cleanup-out','cleaned-text')">↓ Download</button>
+      <button class="btn bg bsm" onclick="document.getElementById('cleanup-in').value='';document.getElementById('cleanup-out').value=''">Clear</button>
+    </div>
+  </div>
+
+  <div class="info-sect">
+    <h2>OCR Studio capabilities</h2>
     <ul>
-      <li>Select the language of text in your image from the dropdown</li>
-      <li>Upload your image by dropping it or clicking to browse</li>
-      <li>Wait a moment while the text is recognised entirely in your browser</li>
-      <li>Copy or download the extracted text in .txt or .docx format</li>
+      <li><strong>Image OCR:</strong> Extract text from any image — photos, screenshots, scanned documents</li>
+      <li><strong>Batch OCR:</strong> Process multiple images at once and download combined results</li>
+      <li><strong>PDF Extract:</strong> Render PDF pages and OCR each one with Tesseract.js</li>
+      <li><strong>Text Cleanup:</strong> Remove OCR artefacts, normalise spacing, fix common substitutions</li>
+      <li><strong>15 languages:</strong> English, Hindi, Bengali, Spanish, French, German, Chinese, Japanese and more</li>
     </ul>
-    <h2 style="margin-top:1.25rem">Tips for best OCR results</h2>
-    <ul>
-      <li>Use high-resolution images (at least 300 DPI for scanned documents)</li>
-      <li>Dark text on light background gives the most accurate results</li>
-      <li>Avoid blurry, skewed or heavily compressed images</li>
-      <li>Printed text is recognised more accurately than handwriting</li>
-      <li>For handwriting, use English mode and ensure clear, large lettering</li>
-    </ul>
-  </section>
+  </div>
 </div>
 
 <footer class="seo-footer">
-  <div class="sfl">
-    <a href="https://universeinvedors.tech">Universe Invedors</a>
-    <a href="https://universeinvedors.tech/tools">All Tools</a>
-    <a href="https://code.universeinvedors.tech">Code</a>
-    <a href="https://diagram.universeinvedors.tech">Diagrams</a>
-    <a href="https://chart.universeinvedors.tech">Charts</a>
-    <a href="https://pdf.universeinvedors.tech">PDF</a>
-    <a href="https://image.universeinvedors.tech">Image</a>
-    <a href="https://3d.universeinvedors.tech">3D</a>
-    <a href="https://map.universeinvedors.tech">Maps</a>
-    <a href="https://media.universeinvedors.tech">Media</a>
+  <div class="sf-links">
+    <a href="https://universeinvedors.tech">Universe Invedors</a><a href="https://universeinvedors.tech/tools">All Tools</a>
+    <a href="https://code.universeinvedors.tech">Code</a><a href="https://diagram.universeinvedors.tech">Diagrams</a>
+    <a href="https://chart.universeinvedors.tech">Charts</a><a href="https://pdf.universeinvedors.tech">PDF</a>
+    <a href="https://image.universeinvedors.tech">Image</a><a href="https://3d.universeinvedors.tech">3D</a>
+    <a href="https://map.universeinvedors.tech">Maps</a><a href="https://media.universeinvedors.tech">Media</a>
   </div>
-  <span>© 2024 Universe Invedors · Tesseract.js OCR · 100+ languages · Free</span>
+  <span>© 2024 Universe Invedors · Tesseract.js · PDF.js · OCR in Browser · Free</span>
 </footer>
-
 <div class="toasts" id="toasts"></div>
 
 <script>
-let currentMode='image', currentText='', currentHOCR='', currentImgSrc=''
+let currentMode='single', batchFiles=[], batchResults=[]
 
 function setMode(m,btn){
   currentMode=m
-  document.querySelectorAll('.mt').forEach(b=>b.classList.remove('active'))
-  btn.classList.add('active')
-  document.getElementById('url-input').style.display = m==='url'?'block':'none'
-  document.getElementById('dropzone').style.display = m==='url'?'none':'flex'
+  document.querySelectorAll('.mode-panel').forEach(p=>p.classList.remove('active'))
+  document.getElementById('mode-'+m).classList.add('active')
+  document.querySelectorAll('.et').forEach(t=>t.classList.remove('active')); btn.classList.add('active')
 }
 
-async function handleFiles(files){
-  if(!files||!files.length) return
-  const file=files[0]
-  if(!file.type.startsWith('image/')) { showError('Please upload an image file (JPG, PNG, WEBP, GIF, BMP, TIFF).'); return }
-  currentImgSrc=URL.createObjectURL(file)
-  await runOCR(file)
-}
-
-async function processURL(){
-  const url=document.getElementById('image-url').value.trim()
-  if(!url) return
+// ── SINGLE OCR ─────────────────────────────────────────────
+async function handleSingle(file){
+  if(!file||!file.type.startsWith('image/')) { showErr('single-err','Please upload an image file'); return }
+  const imgSrc=URL.createObjectURL(file)
+  document.getElementById('single-preview').src=imgSrc
+  document.getElementById('single-dz').style.display='none'
+  document.getElementById('single-result').style.display='none'
+  document.getElementById('single-prog').style.display='block'
+  document.getElementById('single-err').style.display='none'
   try {
-    const resp=await fetch(url)
-    const blob=await resp.blob()
-    currentImgSrc=URL.createObjectURL(blob)
-    await runOCR(blob)
-  } catch(e) { showError('Could not load image from URL. This may be due to CORS restrictions.') }
-}
-
-async function runOCR(source){
-  resetResult()
-  document.getElementById('dropzone').style.display='none'
-  document.getElementById('progress-card').style.display='block'
-  document.getElementById('error-msg').style.display='none'
-
-  try {
-    const {createWorker} = await import('https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.esm.min.js')
-    const lang=document.getElementById('lang').value
-    const worker=await createWorker(lang,1,{
-      logger:m=>{
-        if(m.status==='recognizing text'){
-          const pct=Math.round(m.progress*100)
-          document.getElementById('progress-msg').textContent=`Recognising text… ${pct}%`
-          document.getElementById('progress-fill').style.width=pct+'%'
-        } else {
-          document.getElementById('progress-msg').textContent=m.status
-        }
-      }
-    })
-    const {data}=await worker.recognize(source)
-    await worker.terminate()
-
-    currentText=data.text
-    currentHOCR=data.hocr||''
-
-    const words=currentText.trim().split(/\s+/).filter(Boolean)
-    document.getElementById('result-title').textContent=`✅ Extracted ${words.length} words`
-    document.getElementById('result-text').value=currentText
-    document.getElementById('preview-img').src=currentImgSrc
-    document.getElementById('stat-words').textContent=words.length
-    document.getElementById('stat-chars').textContent=currentText.length
-    document.getElementById('stat-lines').textContent=currentText.split('\n').filter(l=>l.trim()).length
-    document.getElementById('stat-conf').textContent=data.confidence?data.confidence.toFixed(1)+'%':'—'
-    if(currentHOCR) document.getElementById('hocr-btn').style.display=''
-
-    document.getElementById('progress-card').style.display='none'
-    document.getElementById('result-area').style.display='block'
-  } catch(e) {
-    document.getElementById('progress-card').style.display='none'
-    showError(e.message||'OCR failed. Try a clearer image.')
+    const text=await runOCR(file,'single-fill','single-msg')
+    document.getElementById('single-out').value=text
+    const words=text.trim().split(/\s+/).filter(Boolean)
+    document.getElementById('single-title').textContent=`✅ Extracted ${words.length} words`
+    document.getElementById('sw').textContent=words.length
+    document.getElementById('sc').textContent=text.length
+    document.getElementById('sl').textContent=text.split('\n').filter(l=>l.trim()).length
+    document.getElementById('slang').textContent=document.getElementById('lang').value
+    document.getElementById('single-prog').style.display='none'
+    document.getElementById('single-result').style.display='block'
+  } catch(e){
+    document.getElementById('single-prog').style.display='none'
+    document.getElementById('single-dz').style.display='flex'
+    showErr('single-err',e.message||'OCR failed')
   }
 }
 
-function resetResult(){ document.getElementById('result-area').style.display='none'; currentText=''; currentHOCR='' }
-function resetOCR(){
-  resetResult()
-  document.getElementById('dropzone').style.display='flex'
-  document.getElementById('error-msg').style.display='none'
-  document.getElementById('file-input').value=''
+async function runOCR(source, fillId, msgId){
+  const {createWorker}=await import('https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.esm.min.js')
+  const lang=document.getElementById('lang').value
+  const worker=await createWorker(lang,1,{
+    logger:m=>{
+      if(m.status==='recognizing text'){
+        const pct=Math.round(m.progress*100)
+        document.getElementById(msgId).textContent=`Recognising… ${pct}%`
+        document.getElementById(fillId).style.width=pct+'%'
+      } else { document.getElementById(msgId).textContent=m.status }
+    }
+  })
+  const {data}=await worker.recognize(source)
+  await worker.terminate()
+  document.getElementById('sconf').textContent=data.confidence?data.confidence.toFixed(1)+'%':'—'
+  return data.text
 }
-function showError(msg){ const el=document.getElementById('error-msg'); el.textContent=msg; el.style.display='block'; document.getElementById('dropzone').style.display='flex' }
-function copyText(){ navigator.clipboard.writeText(currentText).then(()=>toast('Text copied','ok')) }
-function copyHOCR(){ navigator.clipboard.writeText(currentHOCR).then(()=>toast('hOCR copied','ok')) }
-function downloadTXT(){ const a=document.createElement('a'); a.href='data:text/plain;charset=utf-8,'+encodeURIComponent(currentText); a.download='extracted-text.txt'; a.click() }
-function downloadDOCX(){
-  // Simple .docx via HTML→Blob (plain text wrapped in XML)
-  const xml=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>${currentText.split('\n').map(l=>`<w:p><w:r><w:t xml:space="preserve">${l.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</w:t></w:r></w:p>`).join('')}</w:body></w:document>`
-  const blob=new Blob([xml],{type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'})
-  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='extracted-text.docx'; a.click()
-  toast('DOCX downloaded','ok')
+
+// ── BATCH OCR ──────────────────────────────────────────────
+function handleBatch(files){
+  batchFiles=[...batchFiles,...Array.from(files)]
+  renderBatchList()
+  document.getElementById('batch-actions').style.display='flex'
 }
+
+function renderBatchList(){
+  document.getElementById('batch-list').innerHTML=batchFiles.map((f,i)=>`
+    <div class="batch-item" id="bi-${i}">
+      <span class="batch-icon">${f.type.startsWith('image/')?'🖼️':'📄'}</span>
+      <span class="batch-name">${f.name} (${(f.size/1024).toFixed(0)} KB)</span>
+      <span class="batch-status st-pending" id="bs-${i}">Pending</span>
+      <button onclick="removeBatchItem(${i})" style="background:none;border:none;color:var(--t3);cursor:pointer;font-size:.8rem;margin-left:.3rem">✕</button>
+    </div>`).join('')
+}
+
+function removeBatchItem(i){ batchFiles.splice(i,1); batchResults.splice(i,1); renderBatchList() }
+function clearBatch(){ batchFiles=[]; batchResults=[]; renderBatchList(); document.getElementById('batch-combined').style.display='none'; document.getElementById('batch-actions').style.display='none' }
+
+async function runBatch(){
+  batchResults=[]
+  for(let i=0;i<batchFiles.length;i++){
+    const bs=document.getElementById('bs-'+i)
+    bs.className='batch-status st-processing'; bs.textContent='Processing…'
+    try {
+      const text=await runOCR(batchFiles[i],'single-fill','single-msg')
+      batchResults[i]=text
+      bs.className='batch-status st-done'; bs.textContent='Done ✓'
+    } catch(e){
+      batchResults[i]=''
+      bs.className='batch-status st-err'; bs.textContent='Error'
+    }
+  }
+  const combined=batchFiles.map((f,i)=>`=== ${f.name} ===\n${batchResults[i]||'(failed)'}`).join('\n\n')
+  document.getElementById('batch-out').value=combined
+  document.getElementById('batch-combined').style.display='block'
+  toast(`Batch complete: ${batchFiles.length} files`,'ok')
+}
+
+function downloadAllTXT(){
+  const combined=batchFiles.map((f,i)=>`=== ${f.name} ===\n${batchResults[i]||'(not processed)'}`).join('\n\n')
+  downloadText(combined,'batch-ocr-results.txt')
+}
+
+// ── PDF OCR ────────────────────────────────────────────────
+async function handlePDF(file){
+  if(!file||file.type!=='application/pdf'){toast('Please select a PDF file','err');return}
+  document.getElementById('pdf-dz').style.display='none'
+  document.getElementById('pdf-prog').style.display='block'
+  document.getElementById('pdf-result').style.display='none'
+  try {
+    const {getDocument,GlobalWorkerOptions}=await import('https://cdn.jsdelivr.net/npm/pdfjs-dist@4/build/pdf.min.mjs')
+    GlobalWorkerOptions.workerSrc='https://cdn.jsdelivr.net/npm/pdfjs-dist@4/build/pdf.worker.min.mjs'
+    const buf=await file.arrayBuffer()
+    const pdf=await getDocument({data:buf}).promise
+    let allText=''
+    for(let p=1;p<=pdf.numPages;p++){
+      document.getElementById('pdf-msg').textContent=`OCR page ${p}/${pdf.numPages}…`
+      document.getElementById('pdf-fill').style.width=Math.round(p/pdf.numPages*100)+'%'
+      const page=await pdf.getPage(p)
+      const vp=page.getViewport({scale:2})
+      const canvas=document.createElement('canvas')
+      canvas.width=vp.width; canvas.height=vp.height
+      await page.render({canvasContext:canvas.getContext('2d'),viewport:vp}).promise
+      const text=await runOCR(canvas,'pdf-fill','pdf-msg')
+      allText+=`--- Page ${p} ---\n${text}\n\n`
+    }
+    document.getElementById('pdf-out').value=allText
+    document.getElementById('pdf-title').textContent=`✅ Extracted from ${pdf.numPages} pages`
+    document.getElementById('pdf-prog').style.display='none'
+    document.getElementById('pdf-result').style.display='block'
+  } catch(e){
+    document.getElementById('pdf-prog').style.display='none'
+    document.getElementById('pdf-dz').style.display='flex'
+    toast('PDF extraction failed: '+e.message.slice(0,60),'err')
+  }
+}
+
+// ── TEXT CLEANUP ───────────────────────────────────────────
+function cleanup(type){
+  let text=document.getElementById('cleanup-in').value
+  if(!text.trim()){toast('Paste text first','err');return}
+  if(type==='trim'||type==='all') text=text.split('\n').map(l=>l.trim()).join('\n')
+  if(type==='dedup'||type==='all'){const seen=new Set(); text=text.split('\n').filter(l=>{if(seen.has(l.trim())){return false}seen.add(l.trim());return true}).join('\n')}
+  if(type==='normalize'||type==='all') text=text.replace(/[ \t]{2,}/g,' ').replace(/\n{3,}/g,'\n\n')
+  if(type==='remove-special'||type==='all') text=text.replace(/[^\w\s.,!?;:'"()\-\n]/g,' ').replace(/\s+/g,' ')
+  if(type==='fix-newlines'||type==='all') text=text.replace(/([a-z,;])\n([a-z])/g,'$1 $2')
+  if(type==='numbers') text=text.replace(/\b0\b(?=[a-zA-Z])/g,'O').replace(/\bl\b(?=\d)/g,'1')
+  if(type==='markdown'||type==='all'){
+    const lines=text.split('\n')
+    text=lines.map(l=>{
+      if(l.match(/^[A-Z][A-Z\s]+$/)&&l.length<80) return `## ${l}`
+      if(l.match(/^\d+\.\s/)) return l
+      return l
+    }).join('\n')
+  }
+  document.getElementById('cleanup-out').value=text.trim()
+  toast('Cleanup applied','ok')
+}
+
+// ── UTILS ──────────────────────────────────────────────────
+function copyResult(id){ navigator.clipboard.writeText(document.getElementById(id).value).then(()=>toast('Copied','ok')) }
+function downloadTXT(id,name){ downloadText(document.getElementById(id).value, name+'.txt') }
+function downloadMarkdown(id){ downloadText(document.getElementById(id).value, 'extracted.md') }
+function downloadText(text, filename){ const a=document.createElement('a'); a.href='data:text/plain;charset=utf-8,'+encodeURIComponent(text); a.download=filename; a.click() }
+function showErr(id,msg){ const el=document.getElementById(id); el.textContent=msg; el.style.display='block' }
 function toast(msg,type=''){
   const el=document.createElement('div'); el.className='toast'+(type?' '+type:''); el.textContent=msg
   document.getElementById('toasts').appendChild(el); setTimeout(()=>el.remove(),2800)
