@@ -11,6 +11,13 @@
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="https://universeinvedors.tech/favicon.ico" sizes="any"/><meta name="theme-color" content="#090c13"/>
 <meta name="google-adsense-account" content="ca-pub-8759032363251002"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759032363251002" crossorigin="anonymous"></script>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3GH7524RVW"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-3GH7524RVW',{page_title:document.title,page_location:location.href});
+function gaEvent(action,category,label,value){gtag('event',action,{event_category:category,event_label:label,value:value});}
+</script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#090c13;--surf:#0d1117;--elev:#141b28;--card:#1a2235;--inp:#111827;--t1:#f0f4ff;--t2:#a8b5cc;--t3:#64748b;--t4:#3d4f6e;--acc:#10b981;--acc-h:#34d399;--acc-glow:rgba(16,185,129,.22);--blue:#3b82f6;--violet:#8b5cf6;--border:rgba(255,255,255,.07);--bh:rgba(255,255,255,.13);--font:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',Consolas,monospace;--r:8px;--th:50px;--tr:160ms cubic-bezier(.4,0,.2,1)}
@@ -438,3 +445,41 @@ function toast(msg,type=''){
 </script>
 </body>
 </html>
+<script>
+// GA4 Custom Events — OCR Tool
+(function(){
+  // Track file uploads — main entry point
+  var fileInput=document.querySelector('input[type="file"]');
+  if(fileInput){
+    fileInput.addEventListener('change',function(){
+      var f=this.files[0];
+      if(f) gaEvent('image_uploaded','OCR Tool',f.type);
+    });
+  }
+  // Track language selection
+  document.querySelectorAll('select,[data-lang]').forEach(function(sel){
+    sel.addEventListener('change',function(){
+      gaEvent('ocr_language_selected','OCR Tool',this.value);
+    });
+  });
+  // Track OCR start — highest value event
+  document.querySelectorAll('button').forEach(function(btn){
+    var t=btn.textContent.trim().toLowerCase();
+    if(t.includes('extract')||t.includes('recogni')||t.includes('start')||t.includes('ocr')||t.includes('scan')){
+      btn.addEventListener('click',function(){gaEvent('ocr_started','OCR Tool','extract_text');});
+    }
+    if(t.includes('copy')){
+      btn.addEventListener('click',function(){gaEvent('ocr_text_copied','OCR Tool','result');});
+    }
+    if(t.includes('download')||t.includes('export')||t.includes('pdf')){
+      btn.addEventListener('click',function(){gaEvent('ocr_exported','OCR Tool','pdf');});
+    }
+  });
+  // Track paste image
+  document.addEventListener('paste',function(e){
+    if(e.clipboardData&&e.clipboardData.files.length){
+      gaEvent('image_pasted','OCR Tool','clipboard');
+    }
+  });
+})();
+</script>
