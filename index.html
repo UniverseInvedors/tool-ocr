@@ -297,21 +297,31 @@ async function handleSingle(file){
 }
 
 async function runOCR(source, fillId, msgId){
-  const {createWorker}=await import('https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.esm.min.js')
-  const lang=document.getElementById('lang').value
-  const worker=await createWorker(lang,1,{
-    logger:m=>{
+  // Load Tesseract.js as UMD script (not ESM — ESM path is unreliable on CDN)
+  if(!window.Tesseract){
+    await new Promise(function(resolve,reject){
+      var s=document.createElement('script')
+      s.src='https://cdn.jsdelivr.net/npm/tesseract.js@5.0.5/dist/tesseract.min.js'
+      s.onload=resolve
+      s.onerror=function(){reject(new Error('Could not load Tesseract.js')}
+      document.head.appendChild(s)
+    })
+  }
+  var createWorker=window.Tesseract.createWorker
+  var lang=document.getElementById('lang').value
+  var worker=await createWorker(lang,1,{
+    logger:function(m){
       if(m.status==='recognizing text'){
-        const pct=Math.round(m.progress*100)
-        document.getElementById(msgId).textContent=`Recognising… ${pct}%`
+        var pct=Math.round(m.progress*100)
+        document.getElementById(msgId).textContent='Recognising… '+pct+'%'
         document.getElementById(fillId).style.width=pct+'%'
       } else { document.getElementById(msgId).textContent=m.status }
     }
   })
-  const {data}=await worker.recognize(source)
+  var result=await worker.recognize(source)
   await worker.terminate()
-  document.getElementById('sconf').textContent=data.confidence?data.confidence.toFixed(1)+'%':'—'
-  return data.text
+  document.getElementById('sconf').textContent=result.data.confidence?result.data.confidence.toFixed(1)+'%':'—'
+  return result.data.text
 }
 
 // ── BATCH OCR ──────────────────────────────────────────────
