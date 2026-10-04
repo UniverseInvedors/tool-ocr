@@ -1,12 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>OCR Studio — Image to Text, PDF Text Extraction, Batch OCR, Table Detection | Universe Invedors</title>
+<title>OCR Studio � Image to Text, PDF Text Extraction, Batch OCR, Table Detection | Universe Invedors</title>
 <meta name="description" content="Complete OCR platform. Image to text, PDF text extraction, batch processing, table detection, handwriting recognition. 15 languages, confidence scores, copy/download results. 100% browser-based."/>
 <meta name="keywords" content="OCR online free,image to text free,PDF text extractor,batch OCR tool,table detection OCR,handwriting recognition online,Tesseract.js"/>
 <link rel="canonical" href="https://ocr.universeinvedors.tech/"/><meta name="robots" content="index,follow"/><meta name="author" content="Universe Invedors"/>
-<meta property="og:title" content="OCR Studio — Image to Text, PDF Extract, Batch OCR, Table Detection"/><meta property="og:url" content="https://ocr.universeinvedors.tech/"/><meta property="og:type" content="website"/><meta property="og:image" content="https://universeinvedors.tech/og-image.jpg"/><meta property="og:site_name" content="Universe Invedors Tools"/>
+<meta property="og:title" content="OCR Studio � Image to Text, PDF Extract, Batch OCR, Table Detection"/><meta property="og:url" content="https://ocr.universeinvedors.tech/"/><meta property="og:type" content="website"/><meta property="og:image" content="https://universeinvedors.tech/og-image.jpg"/><meta property="og:site_name" content="Universe Invedors Tools"/>
 <meta name="twitter:card" content="summary_large_image"/><meta name="twitter:image" content="https://universeinvedors.tech/og-image.jpg"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="https://universeinvedors.tech/favicon.ico" sizes="any"/><meta name="theme-color" content="#090c13"/>
 <meta name="google-adsense-account" content="ca-pub-8759032363251002"/>
@@ -18,82 +18,102 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
 gtag('js',new Date());gtag('config','G-3GH7524RVW',{page_title:document.title,page_location:location.href});
 function gaEvent(action,category,label,value){gtag('event',action,{event_category:category,event_label:label,value:value});}
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#090c13;--surf:#0d1117;--elev:#141b28;--card:#1a2235;--inp:#111827;--t1:#f0f4ff;--t2:#a8b5cc;--t3:#64748b;--t4:#3d4f6e;--acc:#10b981;--acc-h:#34d399;--acc-glow:rgba(16,185,129,.22);--blue:#3b82f6;--violet:#8b5cf6;--border:rgba(255,255,255,.07);--bh:rgba(255,255,255,.13);--font:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',Consolas,monospace;--r:8px;--th:50px;--tr:160ms cubic-bezier(.4,0,.2,1)}
-html{font-size:16px}body{font-family:var(--font);background:var(--bg);color:var(--t1);min-height:100dvh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
-::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:3px}
-.topbar{height:var(--th);background:rgba(9,12,19,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem;padding:0 .85rem;flex-shrink:0;position:sticky;top:0;z-index:200}
-.logo{font-size:.82rem;font-weight:700;color:var(--t1);text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:.4rem}.logo:hover{color:var(--acc-h);text-decoration:none}
-.etabs{display:flex;gap:.1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r);padding:3px;overflow-x:auto}
-.et{padding:.26rem .65rem;border-radius:6px;font-size:.72rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--t3);white-space:nowrap;transition:all var(--tr)}.et:hover{background:rgba(255,255,255,.06);color:var(--t2)}.et.active{background:var(--acc);color:#000;box-shadow:0 0 10px var(--acc-glow)}
-.sp{flex:1}
-.btn{display:inline-flex;align-items:center;gap:.35rem;padding:.32rem .75rem;border-radius:var(--r);font-size:.73rem;font-weight:600;cursor:pointer;border:none;transition:all var(--tr);white-space:nowrap}
-.bg{background:rgba(255,255,255,.05);color:var(--t2);border:1px solid var(--border)}.bg:hover{background:rgba(255,255,255,.09);border-color:var(--bh);color:var(--t1)}
-.bp{background:var(--acc);color:#000}.bp:hover{background:var(--acc-h)}
-.bsm{padding:.22rem .55rem;font-size:.68rem}
-.badge-priv{display:inline-flex;align-items:center;gap:.25rem;padding:.2rem .55rem;border-radius:100px;font-size:.67rem;font-weight:700;background:rgba(16,185,129,.1);color:var(--acc);border:1px solid rgba(16,185,129,.25)}
-.container{max-width:1000px;margin:0 auto;padding:1.5rem 1rem;flex:1;width:100%}
-/* Mode panels */
-.mode-panel{display:none}.mode-panel.active{display:block}
-/* Settings row */
-.settings-bar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;padding:.75rem;background:var(--surf);border:1px solid var(--border);border-radius:var(--r);margin-bottom:1.25rem}
-.settings-bar label{font-size:.75rem;font-weight:600;color:var(--t3)}
-.settings-bar select,.settings-bar input[type=checkbox]{background:var(--inp);border:1px solid var(--border);border-radius:6px;color:var(--t1);font-size:.8rem;outline:none;padding:.35rem .55rem}
-/* Drop zone */
-.dz{border:2px dashed var(--border);border-radius:14px;padding:2.5rem 2rem;text-align:center;cursor:pointer;transition:all var(--tr);background:var(--surf);margin-bottom:1.25rem}
-.dz:hover,.dz.drag{border-color:var(--acc);background:rgba(16,185,129,.04)}
-/* Progress */
-.prog-card{padding:1rem;border-radius:var(--r);background:var(--card);border:1px solid var(--border);margin-bottom:1.25rem}
-.prog-bar{height:5px;border-radius:3px;background:rgba(255,255,255,.07);overflow:hidden;margin:.5rem 0}
-.prog-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--acc),var(--blue));transition:width .3s}
-/* Result */
-.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem}
-.result-grid img{width:100%;border-radius:10px;object-fit:contain;max-height:320px;border:1px solid var(--border)}
-.result-text{width:100%;height:320px;padding:.85rem;border-radius:10px;background:var(--card);border:1px solid var(--border);color:var(--t1);font-family:var(--mono);font-size:.8rem;resize:vertical;outline:none;line-height:1.65}
-.stats-row{display:flex;flex-wrap:wrap;gap:.4rem .9rem;font-size:.72rem;color:var(--t3);margin-top:.5rem}
-.stat-val{color:var(--acc-h);font-weight:700}
-/* Batch */
-.batch-list{display:flex;flex-direction:column;gap:.35rem}
-.batch-item{display:flex;align-items:center;gap:.65rem;padding:.6rem .75rem;border-radius:var(--r);background:var(--card);border:1px solid var(--border)}
-.batch-icon{font-size:1rem;width:20px;text-align:center;flex-shrink:0}
-.batch-name{flex:1;font-size:.8rem;color:var(--t1)}
-.batch-status{font-size:.72rem;padding:.15rem .45rem;border-radius:4px;font-weight:600}
-.st-pending{background:rgba(100,116,139,.12);color:var(--t3)}
-.st-processing{background:rgba(6,182,212,.12);color:#22d3ee}
-.st-done{background:rgba(16,185,129,.12);color:var(--acc)}
-.st-err{background:rgba(239,68,68,.12);color:#f87171}
-/* Cleanup panel */
-.cleanup-area{display:flex;gap:.75rem;flex:1;overflow:hidden}
-.cleanup-col{flex:1;display:flex;flex-direction:column}
-.cltitle{font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--t3);margin-bottom:.4rem}
-.cltextarea{flex:1;width:100%;padding:.75rem;background:var(--inp);border:1px solid var(--border);border-radius:var(--r);color:var(--t1);font-family:var(--mono);font-size:.8rem;resize:none;outline:none;line-height:1.65;min-height:200px}
-.cltextarea:focus{border-color:rgba(16,185,129,.4)}
-.cleanup-btns{display:flex;flex-wrap:wrap;gap:.35rem;margin:.5rem 0}
-/* Info */
-.info-sect{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)}
-.info-sect h2{font-size:.95rem;font-weight:700;margin-bottom:.6rem}
-.info-sect ul{color:var(--t2);font-size:.85rem;line-height:1.95;padding-left:1.25rem}
-.seo-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.3rem .75rem;padding:.35rem .75rem;border-top:1px solid var(--border);background:var(--surf);font-size:.65rem;color:var(--t3);flex-shrink:0}
-.seo-footer a{color:var(--t3)}.seo-footer a:hover{color:var(--t2)}.sf-links{display:flex;flex-wrap:wrap;gap:.2rem .6rem}
-.toasts{position:fixed;bottom:2.5rem;right:1rem;z-index:999;display:flex;flex-direction:column;gap:.4rem;pointer-events:none}
-.toast{padding:.5rem .85rem;border-radius:var(--r);font-size:.75rem;font-weight:600;background:var(--card);border:1px solid var(--border);color:var(--t1);box-shadow:0 6px 24px rgba(0,0,0,.5);animation:tin .2s ease}
-.toast.ok{border-color:rgba(16,185,129,.35);color:var(--acc)}.toast.err{border-color:rgba(239,68,68,.35);color:#f87171}.toast.info{border-color:rgba(59,130,246,.35);color:#60a5fa}
-@keyframes tin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:600px){.result-grid{grid-template-columns:1fr}.result-text{height:220px}}
-</style>
+:root{
+  --bg-base:#03050a;--bg-surface:#080d15;--bg-elevated:#0d1421;--bg-card:#111b2e;--bg-input:#0d1421;
+  --text-1:#f0f4ff;--text-2:#a8b8cf;--text-3:#5a6a82;--text-4:#2e3d54;
+  --accent:#3b82f6;--accent-light:#60a5fa;--accent-subtle:rgba(59,130,246,.12);
+  --accent-border:rgba(59,130,246,.30);--accent-glow:rgba(59,130,246,.22);
+  --green:#10b981;--red:#ef4444;--yellow:#f59e0b;--cyan:#06b6d4;--violet:#8b5cf6;
+  --border:rgba(255,255,255,.07);--border-hover:rgba(255,255,255,.14);--border-focus:rgba(59,130,246,.50);
+  --shadow-md:0 4px 16px rgba(0,0,0,.50);--shadow-lg:0 12px 40px rgba(0,0,0,.60);
+  --font-sans:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',Consolas,monospace;
+  --r-sm:6px;--r-md:10px;--r-lg:14px;--r-xl:18px;
+  --topbar-h:52px;--t:180ms cubic-bezier(.4,0,.2,1);
+}
+html{font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-sans);background:var(--bg-base);color:var(--text-1);height:100dvh;display:flex;flex-direction:column;overflow:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.10);border-radius:3px}::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.20)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--r-sm)}
+/* TOPBAR */
+.topbar{height:var(--topbar-h);background:rgba(3,5,10,.92);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;padding:0 1rem;flex-shrink:0;z-index:300}
+.topbar-logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--text-1);flex-shrink:0;transition:opacity var(--t)}
+.topbar-logo:hover{opacity:.8;text-decoration:none}
+.topbar-logo-mark{width:26px;height:26px;border-radius:var(--r-sm);background:linear-gradient(135deg,#3b82f6,#06b6d4);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.topbar-logo-mark svg{width:14px;height:14px}
+.topbar-logo-text{display:flex;flex-direction:column;line-height:1}
+.topbar-logo-company{font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-1)}
+.topbar-logo-tool{font-size:.67rem;font-weight:500;color:var(--text-3);margin-top:1px}
+.topbar-sep{width:1px;height:18px;background:var(--border);flex-shrink:0}
+.topbar-spacer,.sp{flex:1}
+.badge-free{display:inline-flex;align-items:center;gap:.3rem;padding:.2rem .55rem;border-radius:9999px;font-size:.67rem;font-weight:700;background:rgba(16,185,129,.10);color:var(--green);border:1px solid rgba(16,185,129,.22)}
+/* ENGINE TABS */
+.etabs{display:flex;gap:.1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r-md);padding:2px;overflow-x:auto;flex-shrink:1}
+.et{display:inline-flex;align-items:center;gap:.3rem;padding:.26rem .7rem;border-radius:7px;font-size:.73rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--text-3);white-space:nowrap;transition:all var(--t)}
+.et:hover{background:rgba(255,255,255,.06);color:var(--text-2)}
+.et.active{background:var(--accent);color:#fff;box-shadow:0 0 12px var(--accent-glow)}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.38rem .85rem;border-radius:var(--r-md);font-size:.78rem;font-weight:600;cursor:pointer;border:none;transition:all var(--t);white-space:nowrap;font-family:var(--font-sans)}
+.btn:active{transform:scale(.97)}
+.btn svg{width:14px;height:14px;flex-shrink:0}
+.bg,.btn-ghost{background:rgba(255,255,255,.05);color:var(--text-2);border:1px solid var(--border)}
+.bg:hover,.btn-ghost:hover{background:rgba(255,255,255,.09);border-color:var(--border-hover);color:var(--text-1)}
+.bp,.btn-primary{background:var(--accent);color:#fff;box-shadow:0 2px 8px var(--accent-glow)}
+.bp:hover,.btn-primary:hover{background:var(--accent-light);box-shadow:0 4px 20px var(--accent-glow)}
+.bgr,.btn-success{background:var(--green);color:#000}
+.bgr:hover,.btn-success:hover{background:#0ea371}
+.bsm,.btn-sm{padding:.28rem .65rem;font-size:.72rem}
+.btn-violet{background:var(--violet);color:#fff}.btn-violet:hover{background:#7c3aed}
+.btn:disabled,.btn[disabled]{opacity:.4;cursor:not-allowed}
+/* PANES */
+.pane{display:flex;flex-direction:column;overflow:hidden}
+.pane-head,.ph{display:flex;align-items:center;gap:.5rem;padding:.42rem 1rem;background:var(--bg-surface);border-bottom:1px solid var(--border);font-size:.69rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-3);flex-shrink:0}
+.pd,.pane-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.phr,.pane-actions{margin-left:auto;display:flex;gap:.3rem}
+/* FORM */
+.fl,.field-label{font-size:.71rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:.3rem;display:block}
+.fi,input[type=text],input[type=number],select,textarea{width:100%;padding:.45rem .7rem;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--r-md);color:var(--text-1);font-size:.84rem;font-family:var(--font-sans);outline:none;transition:border-color var(--t),box-shadow var(--t)}
+.fi:focus,input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.10)}
+select option{background:var(--bg-elevated)}
+input[type=range]{accent-color:var(--accent);width:100%}
+/* CARDS */
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.1rem 1.25rem}
+.card:hover{border-color:var(--border-hover)}
+/* TOASTS */
+.toasts{position:fixed;bottom:1.25rem;right:1.25rem;z-index:999;display:flex;flex-direction:column;gap:.45rem;pointer-events:none}
+.toast{display:flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:var(--r-md);font-size:.8rem;font-weight:600;background:var(--bg-card);border:1px solid var(--border);color:var(--text-1);box-shadow:var(--shadow-lg);animation:toastIn .22s ease;pointer-events:auto}
+.toast.ok{border-color:rgba(16,185,129,.35);color:var(--green)}.toast.err{border-color:rgba(239,68,68,.35);color:#f87171}.toast.info{border-color:var(--accent-border);color:var(--accent-light)}
+@keyframes toastIn{from{opacity:0;transform:translateY(8px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+/* SEO FOOTER */
+.seo-footer,.tool-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .9rem;padding:.6rem 1rem;border-top:1px solid var(--border);background:var(--bg-surface);font-size:.7rem;color:var(--text-3);flex-shrink:0}
+.seo-footer a,.tool-footer a{color:var(--text-3)}.seo-footer a:hover,.tool-footer a:hover{color:var(--text-2);text-decoration:none}
+.sf-links,.tool-footer-links{display:flex;flex-wrap:wrap;gap:.25rem .65rem}
 </head>
 <body>
 <header class="topbar">
-  <a href="https://universeinvedors.tech/tools" class="logo">🔍 <span style="color:var(--acc-h)">OCR Studio</span></a>
+  <a href="https://universeinvedors.tech/tools" class="topbar-logo" aria-label="All Tools">
+    <div class="topbar-logo-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0zM2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+    </div>
+    <div class="topbar-logo-text">
+      <span class="topbar-logo-company">Universe Invedors</span>
+      <span class="topbar-logo-tool">OCR Studio</span>
+    </div>
+  </a>
+  <div class="topbar-sep"></div>
   <div class="etabs">
-    <button class="et active" onclick="setMode('single',this)">🖼 Image OCR</button>
-    <button class="et" onclick="setMode('batch',this)">📂 Batch OCR</button>
-    <button class="et" onclick="setMode('pdf',this)">📄 PDF Extract</button>
-    <button class="et" onclick="setMode('cleanup',this)">✨ Text Cleanup</button>
+    <button class="et active" onclick="setMode('single',this)">?? Image OCR</button>
+    <button class="et" onclick="setMode('batch',this)">?? Batch OCR</button>
+    <button class="et" onclick="setMode('pdf',this)">?? PDF Extract</button>
+    <button class="et" onclick="setMode('cleanup',this)">? Text Cleanup</button>
   </div>
   <div class="sp"></div>
-  <span class="badge-priv">🔒 100% Local — No Upload</span>
+  <span class="badge-priv">?? 100% Local � No Upload</span>
 </header>
 
 <div class="container">
@@ -110,7 +130,7 @@ html{font-size:16px}body{font-family:var(--font);background:var(--bg);color:var(
     </select>
     <label style="display:flex;align-items:center;gap:.3rem;cursor:pointer"><input type="checkbox" id="preserve-layout" style="accent-color:var(--acc)"> Preserve layout</label>
     <label style="display:flex;align-items:center;gap:.3rem;cursor:pointer"><input type="checkbox" id="detect-tables" style="accent-color:var(--acc)"> Detect tables</label>
-    <label style="margin-left:auto;font-size:.72rem;color:var(--t3)">Tesseract.js v5 · WebAssembly</label>
+    <label style="margin-left:auto;font-size:.72rem;color:var(--t3)">Tesseract.js v5 � WebAssembly</label>
   </div>
 
   <!-- SINGLE IMAGE MODE -->
@@ -120,16 +140,16 @@ html{font-size:16px}body{font-family:var(--font);background:var(--bg);color:var(
       ondragover="event.preventDefault();this.classList.add('drag')"
       ondragleave="this.classList.remove('drag')"
       ondrop="event.preventDefault();this.classList.remove('drag');handleSingle(event.dataTransfer.files[0])">
-      <div style="font-size:2.5rem;margin-bottom:.75rem">🖼️</div>
+      <div style="font-size:2.5rem;margin-bottom:.75rem">???</div>
       <h2 style="font-size:.95rem;font-weight:700;margin-bottom:.35rem">Drop an image here or click to browse</h2>
-      <p style="font-size:.8rem;color:var(--t2)">JPG, PNG, WEBP, GIF, BMP, TIFF · Higher resolution = better accuracy</p>
-      <p style="font-size:.72rem;color:var(--t3);margin-top:.35rem">💡 Tip: Use images with clear, dark text on light background</p>
+      <p style="font-size:.8rem;color:var(--t2)">JPG, PNG, WEBP, GIF, BMP, TIFF � Higher resolution = better accuracy</p>
+      <p style="font-size:.72rem;color:var(--t3);margin-top:.35rem">?? Tip: Use images with clear, dark text on light background</p>
     </div>
     <input type="file" id="single-file" accept="image/*" style="display:none" onchange="handleSingle(this.files[0])">
     <div id="single-prog" class="prog-card" style="display:none">
-      <p id="single-msg" style="font-size:.82rem;color:var(--t2)">Initialising…</p>
+      <p id="single-msg" style="font-size:.82rem;color:var(--t2)">Initialising�</p>
       <div class="prog-bar"><div class="prog-fill" id="single-fill" style="width:0%"></div></div>
-      <p style="font-size:.7rem;color:var(--t3);margin-top:.25rem">Processing locally — your image never leaves your device</p>
+      <p style="font-size:.7rem;color:var(--t3);margin-top:.25rem">Processing locally � your image never leaves your device</p>
     </div>
     <div id="single-result" style="display:none">
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem">
@@ -137,8 +157,8 @@ html{font-size:16px}body{font-family:var(--font);background:var(--bg);color:var(
         <div style="display:flex;gap:.35rem;flex-wrap:wrap">
           <button class="btn bg bsm" onclick="document.getElementById('single-file').click()">New Image</button>
           <button class="btn bg bsm" onclick="copyResult('single-out')">Copy Text</button>
-          <button class="btn bg bsm" onclick="downloadTXT('single-out','extracted')">↓ .txt</button>
-          <button class="btn bp bsm" onclick="downloadMarkdown('single-out')">↓ .md</button>
+          <button class="btn bg bsm" onclick="downloadTXT('single-out','extracted')">? .txt</button>
+          <button class="btn bp bsm" onclick="downloadMarkdown('single-out')">? .md</button>
         </div>
       </div>
       <div class="result-grid">
@@ -149,8 +169,8 @@ html{font-size:16px}body{font-family:var(--font);background:var(--bg);color:var(
         <span>Words: <span class="stat-val" id="sw">0</span></span>
         <span>Characters: <span class="stat-val" id="sc">0</span></span>
         <span>Lines: <span class="stat-val" id="sl">0</span></span>
-        <span>Confidence: <span class="stat-val" id="sconf">—</span></span>
-        <span>Language: <span class="stat-val" id="slang">—</span></span>
+        <span>Confidence: <span class="stat-val" id="sconf">�</span></span>
+        <span>Language: <span class="stat-val" id="slang">�</span></span>
       </div>
     </div>
     <div id="single-err" style="display:none;padding:.85rem;border-radius:var(--r);background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);color:#f87171;font-size:.82rem;margin-top:.75rem"></div>
@@ -163,15 +183,15 @@ html{font-size:16px}body{font-family:var(--font);background:var(--bg);color:var(
       ondragover="event.preventDefault();this.classList.add('drag')"
       ondragleave="this.classList.remove('drag')"
       ondrop="event.preventDefault();this.classList.remove('drag');handleBatch(event.dataTransfer.files)">
-      <div style="font-size:2rem;margin-bottom:.5rem">📂</div>
+      <div style="font-size:2rem;margin-bottom:.5rem">??</div>
       <h2 style="font-size:.9rem;font-weight:700;margin-bottom:.25rem">Drop multiple images here</h2>
       <p style="font-size:.78rem;color:var(--t2)">Select or drop multiple image files to process them all</p>
     </div>
     <input type="file" id="batch-file" accept="image/*" multiple style="display:none" onchange="handleBatch(this.files)">
     <div id="batch-list" class="batch-list"></div>
     <div id="batch-actions" style="display:none;margin-top:.75rem;display:flex;gap:.5rem;flex-wrap:wrap">
-      <button class="btn bp" onclick="runBatch()">▶ Process All</button>
-      <button class="btn bg bsm" onclick="downloadAllTXT()">↓ Download All .txt</button>
+      <button class="btn bp" onclick="runBatch()">? Process All</button>
+      <button class="btn bg bsm" onclick="downloadAllTXT()">? Download All .txt</button>
       <button class="btn bg bsm" onclick="clearBatch()">Clear</button>
     </div>
     <div id="batch-combined" style="display:none;margin-top:1.25rem">
@@ -190,13 +210,13 @@ html{font-size:16px}body{font-family:var(--font);background:var(--bg);color:var(
       ondragover="event.preventDefault();this.classList.add('drag')"
       ondragleave="this.classList.remove('drag')"
       ondrop="event.preventDefault();this.classList.remove('drag');handlePDF(event.dataTransfer.files[0])">
-      <div style="font-size:2.5rem;margin-bottom:.75rem">📄</div>
+      <div style="font-size:2.5rem;margin-bottom:.75rem">??</div>
       <h2 style="font-size:.95rem;font-weight:700;margin-bottom:.35rem">Drop a PDF here to extract text</h2>
       <p style="font-size:.8rem;color:var(--t2)">Extracts text from each page. Renders pages as images then runs OCR.</p>
     </div>
     <input type="file" id="pdf-file" accept="application/pdf" style="display:none" onchange="handlePDF(this.files[0])">
     <div id="pdf-prog" class="prog-card" style="display:none">
-      <p id="pdf-msg" style="font-size:.82rem;color:var(--t2)">Loading PDF…</p>
+      <p id="pdf-msg" style="font-size:.82rem;color:var(--t2)">Loading PDF�</p>
       <div class="prog-bar"><div class="prog-fill" id="pdf-fill" style="width:0%"></div></div>
     </div>
     <div id="pdf-result" style="display:none">
@@ -204,7 +224,7 @@ html{font-size:16px}body{font-family:var(--font);background:var(--bg);color:var(
         <span id="pdf-title" style="font-size:.9rem;font-weight:700;color:var(--acc-h)">PDF Text</span>
         <div style="display:flex;gap:.35rem">
           <button class="btn bg bsm" onclick="copyResult('pdf-out')">Copy</button>
-          <button class="btn bp bsm" onclick="downloadTXT('pdf-out','pdf-extracted')">↓ .txt</button>
+          <button class="btn bp bsm" onclick="downloadTXT('pdf-out','pdf-extracted')">? .txt</button>
         </div>
       </div>
       <textarea class="result-text" id="pdf-out" style="height:400px" spellcheck="false"></textarea>
@@ -220,24 +240,24 @@ html{font-size:16px}body{font-family:var(--font);background:var(--bg);color:var(
       <button class="btn bg bsm" onclick="cleanup('normalize')">Normalise spacing</button>
       <button class="btn bg bsm" onclick="cleanup('remove-special')">Remove special chars</button>
       <button class="btn bg bsm" onclick="cleanup('fix-newlines')">Fix line breaks</button>
-      <button class="btn bg bsm" onclick="cleanup('numbers')">Fix 0→O, l→1</button>
-      <button class="btn bg bsm" onclick="cleanup('markdown')">→ Markdown</button>
-      <button class="btn bp bsm" onclick="cleanup('all')">✨ Clean All</button>
+      <button class="btn bg bsm" onclick="cleanup('numbers')">Fix 0?O, l?1</button>
+      <button class="btn bg bsm" onclick="cleanup('markdown')">? Markdown</button>
+      <button class="btn bp bsm" onclick="cleanup('all')">? Clean All</button>
     </div>
     <div class="cleanup-area">
       <div class="cleanup-col">
         <div class="cltitle">Input (paste OCR text)</div>
-        <textarea class="cltextarea" id="cleanup-in" placeholder="Paste your OCR output here…"></textarea>
+        <textarea class="cltextarea" id="cleanup-in" placeholder="Paste your OCR output here�"></textarea>
       </div>
-      <div style="display:flex;align-items:center;justify-content:center;padding:0 .5rem;color:var(--t3);font-size:1.2rem">→</div>
+      <div style="display:flex;align-items:center;justify-content:center;padding:0 .5rem;color:var(--t3);font-size:1.2rem">?</div>
       <div class="cleanup-col">
         <div class="cltitle">Cleaned Output</div>
-        <textarea class="cltextarea" id="cleanup-out" placeholder="Cleaned text will appear here…" readonly></textarea>
+        <textarea class="cltextarea" id="cleanup-out" placeholder="Cleaned text will appear here�" readonly></textarea>
       </div>
     </div>
     <div style="display:flex;gap:.4rem;margin-top:.6rem">
       <button class="btn bg bsm" onclick="copyResult('cleanup-out')">Copy Result</button>
-      <button class="btn bg bsm" onclick="downloadTXT('cleanup-out','cleaned-text')">↓ Download</button>
+      <button class="btn bg bsm" onclick="downloadTXT('cleanup-out','cleaned-text')">? Download</button>
       <button class="btn bg bsm" onclick="document.getElementById('cleanup-in').value='';document.getElementById('cleanup-out').value=''">Clear</button>
     </div>
   </div>
@@ -245,7 +265,7 @@ html{font-size:16px}body{font-family:var(--font);background:var(--bg);color:var(
   <div class="info-sect">
     <h2>OCR Studio capabilities</h2>
     <ul>
-      <li><strong>Image OCR:</strong> Extract text from any image — photos, screenshots, scanned documents</li>
+      <li><strong>Image OCR:</strong> Extract text from any image � photos, screenshots, scanned documents</li>
       <li><strong>Batch OCR:</strong> Process multiple images at once and download combined results</li>
       <li><strong>PDF Extract:</strong> Render PDF pages and OCR each one with Tesseract.js</li>
       <li><strong>Text Cleanup:</strong> Remove OCR artefacts, normalise spacing, fix common substitutions</li>
@@ -262,7 +282,7 @@ html{font-size:16px}body{font-family:var(--font);background:var(--bg);color:var(
     <a href="https://image.universeinvedors.tech">Image</a><a href="https://3d.universeinvedors.tech">3D</a>
     <a href="https://map.universeinvedors.tech">Maps</a><a href="https://media.universeinvedors.tech">Media</a>
   </div>
-  <span>© 2024 Universe Invedors · Tesseract.js · PDF.js · OCR in Browser · Free</span>
+  <span>� 2024 Universe Invedors � Tesseract.js � PDF.js � OCR in Browser � Free</span>
 </footer>
 <div class="toasts" id="toasts"></div>
 
@@ -276,7 +296,7 @@ function setMode(m,btn){
   document.querySelectorAll('.et').forEach(t=>t.classList.remove('active')); btn.classList.add('active')
 }
 
-// ── SINGLE OCR ─────────────────────────────────────────────
+// -- SINGLE OCR ---------------------------------------------
 async function handleSingle(file){
   if(!file||!file.type.startsWith('image/')) { showErr('single-err','Please upload an image file'); return }
   const imgSrc=URL.createObjectURL(file)
@@ -289,7 +309,7 @@ async function handleSingle(file){
     const text=await runOCR(file,'single-fill','single-msg')
     document.getElementById('single-out').value=text
     const words=text.trim().split(/\s+/).filter(Boolean)
-    document.getElementById('single-title').textContent=`✅ Extracted ${words.length} words`
+    document.getElementById('single-title').textContent=`? Extracted ${words.length} words`
     document.getElementById('sw').textContent=words.length
     document.getElementById('sc').textContent=text.length
     document.getElementById('sl').textContent=text.split('\n').filter(l=>l.trim()).length
@@ -304,7 +324,7 @@ async function handleSingle(file){
 }
 
 async function runOCR(source, fillId, msgId){
-  // Load Tesseract.js as UMD script (not ESM — ESM path is unreliable on CDN)
+  // Load Tesseract.js as UMD script (not ESM � ESM path is unreliable on CDN)
   if(!window.Tesseract){
     await new Promise(function(resolve,reject){
       var s=document.createElement('script')
@@ -320,18 +340,18 @@ async function runOCR(source, fillId, msgId){
     logger:function(m){
       if(m.status==='recognizing text'){
         var pct=Math.round(m.progress*100)
-        document.getElementById(msgId).textContent='Recognising… '+pct+'%'
+        document.getElementById(msgId).textContent='Recognising� '+pct+'%'
         document.getElementById(fillId).style.width=pct+'%'
       } else { document.getElementById(msgId).textContent=m.status }
     }
   })
   var result=await worker.recognize(source)
   await worker.terminate()
-  document.getElementById('sconf').textContent=result.data.confidence?result.data.confidence.toFixed(1)+'%':'—'
+  document.getElementById('sconf').textContent=result.data.confidence?result.data.confidence.toFixed(1)+'%':'�'
   return result.data.text
 }
 
-// ── BATCH OCR ──────────────────────────────────────────────
+// -- BATCH OCR ----------------------------------------------
 function handleBatch(files){
   batchFiles=[...batchFiles,...Array.from(files)]
   renderBatchList()
@@ -341,10 +361,10 @@ function handleBatch(files){
 function renderBatchList(){
   document.getElementById('batch-list').innerHTML=batchFiles.map((f,i)=>`
     <div class="batch-item" id="bi-${i}">
-      <span class="batch-icon">${f.type.startsWith('image/')?'🖼️':'📄'}</span>
+      <span class="batch-icon">${f.type.startsWith('image/')?'???':'??'}</span>
       <span class="batch-name">${f.name} (${(f.size/1024).toFixed(0)} KB)</span>
       <span class="batch-status st-pending" id="bs-${i}">Pending</span>
-      <button onclick="removeBatchItem(${i})" style="background:none;border:none;color:var(--t3);cursor:pointer;font-size:.8rem;margin-left:.3rem">✕</button>
+      <button onclick="removeBatchItem(${i})" style="background:none;border:none;color:var(--t3);cursor:pointer;font-size:.8rem;margin-left:.3rem">?</button>
     </div>`).join('')
 }
 
@@ -355,11 +375,11 @@ async function runBatch(){
   batchResults=[]
   for(let i=0;i<batchFiles.length;i++){
     const bs=document.getElementById('bs-'+i)
-    bs.className='batch-status st-processing'; bs.textContent='Processing…'
+    bs.className='batch-status st-processing'; bs.textContent='Processing�'
     try {
       const text=await runOCR(batchFiles[i],'single-fill','single-msg')
       batchResults[i]=text
-      bs.className='batch-status st-done'; bs.textContent='Done ✓'
+      bs.className='batch-status st-done'; bs.textContent='Done ?'
     } catch(e){
       batchResults[i]=''
       bs.className='batch-status st-err'; bs.textContent='Error'
@@ -376,7 +396,7 @@ function downloadAllTXT(){
   downloadText(combined,'batch-ocr-results.txt')
 }
 
-// ── PDF OCR ────────────────────────────────────────────────
+// -- PDF OCR ------------------------------------------------
 async function handlePDF(file){
   if(!file||file.type!=='application/pdf'){toast('Please select a PDF file','err');return}
   document.getElementById('pdf-dz').style.display='none'
@@ -389,7 +409,7 @@ async function handlePDF(file){
     const pdf=await getDocument({data:buf}).promise
     let allText=''
     for(let p=1;p<=pdf.numPages;p++){
-      document.getElementById('pdf-msg').textContent=`OCR page ${p}/${pdf.numPages}…`
+      document.getElementById('pdf-msg').textContent=`OCR page ${p}/${pdf.numPages}�`
       document.getElementById('pdf-fill').style.width=Math.round(p/pdf.numPages*100)+'%'
       const page=await pdf.getPage(p)
       const vp=page.getViewport({scale:2})
@@ -400,7 +420,7 @@ async function handlePDF(file){
       allText+=`--- Page ${p} ---\n${text}\n\n`
     }
     document.getElementById('pdf-out').value=allText
-    document.getElementById('pdf-title').textContent=`✅ Extracted from ${pdf.numPages} pages`
+    document.getElementById('pdf-title').textContent=`? Extracted from ${pdf.numPages} pages`
     document.getElementById('pdf-prog').style.display='none'
     document.getElementById('pdf-result').style.display='block'
   } catch(e){
@@ -410,7 +430,7 @@ async function handlePDF(file){
   }
 }
 
-// ── TEXT CLEANUP ───────────────────────────────────────────
+// -- TEXT CLEANUP -------------------------------------------
 function cleanup(type){
   let text=document.getElementById('cleanup-in').value
   if(!text.trim()){toast('Paste text first','err');return}
@@ -432,7 +452,7 @@ function cleanup(type){
   toast('Cleanup applied','ok')
 }
 
-// ── UTILS ──────────────────────────────────────────────────
+// -- UTILS --------------------------------------------------
 function copyResult(id){ navigator.clipboard.writeText(document.getElementById(id).value).then(()=>toast('Copied','ok')) }
 function downloadTXT(id,name){ downloadText(document.getElementById(id).value, name+'.txt') }
 function downloadMarkdown(id){ downloadText(document.getElementById(id).value, 'extracted.md') }
@@ -446,9 +466,9 @@ function toast(msg,type=''){
 </body>
 </html>
 <script>
-// GA4 Custom Events — OCR Tool
+// GA4 Custom Events � OCR Tool
 (function(){
-  // Track file uploads — main entry point
+  // Track file uploads � main entry point
   var fileInput=document.querySelector('input[type="file"]');
   if(fileInput){
     fileInput.addEventListener('change',function(){
@@ -462,7 +482,7 @@ function toast(msg,type=''){
       gaEvent('ocr_language_selected','OCR Tool',this.value);
     });
   });
-  // Track OCR start — highest value event
+  // Track OCR start � highest value event
   document.querySelectorAll('button').forEach(function(btn){
     var t=btn.textContent.trim().toLowerCase();
     if(t.includes('extract')||t.includes('recogni')||t.includes('start')||t.includes('ocr')||t.includes('scan')){
@@ -483,3 +503,31 @@ function toast(msg,type=''){
   });
 })();
 </script>
+
+
+/* OCR-specific */
+body{min-height:100dvh;overflow:auto}
+.container{max-width:1000px;margin:0 auto;padding:1.5rem 1rem;flex:1;width:100%}
+.page-hero{padding-top:1.75rem;margin-bottom:1.75rem}
+.page-hero-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-light);margin-bottom:.4rem}
+.page-hero-title{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-bottom:.5rem}
+.page-hero-desc{font-size:.9rem;color:var(--text-2);max-width:560px;line-height:1.65}
+.mode-panel{display:none}.mode-panel.active{display:block;animation:fadeUp .2s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.settings-bar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;padding:.75rem;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--r-lg);margin-bottom:1.25rem}
+.settings-bar label{font-size:.75rem;font-weight:600;color:var(--text-3)}
+.dz{border:2px dashed var(--border);border-radius:var(--r-xl);padding:2.5rem 2rem;text-align:center;cursor:pointer;transition:all var(--t);background:var(--bg-surface);margin-bottom:1.25rem}
+.dz:hover,.dz.drag{border-color:var(--accent);background:var(--accent-subtle)}
+.prog-card{padding:1rem;border-radius:var(--r-md);background:var(--bg-card);border:1px solid var(--border);margin-bottom:1.25rem}
+.prog-bar{height:5px;border-radius:3px;background:var(--border);overflow:hidden;margin:.5rem 0}
+.prog-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent),var(--cyan));transition:width .3s}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem}
+.result-grid img{width:100%;border-radius:var(--r-lg);object-fit:contain;max-height:320px;border:1px solid var(--border)}
+.result-text{width:100%;height:320px;padding:.85rem;border-radius:var(--r-lg);background:var(--bg-card);border:1px solid var(--border);color:var(--text-1);font-family:var(--font-mono);font-size:.8rem;resize:vertical;outline:none;line-height:1.65}
+.result-text:focus{border-color:var(--accent)}
+.batch-list{display:flex;flex-direction:column;gap:.35rem}
+.batch-item{display:flex;align-items:center;gap:.65rem;padding:.6rem .75rem;border-radius:var(--r-md);background:var(--bg-card);border:1px solid var(--border)}
+.batch-name{flex:1;font-size:.8rem;color:var(--text-1)}
+.batch-status{font-size:.72rem;padding:.15rem .45rem;border-radius:4px;font-weight:600}
+.st-pending{background:rgba(100,116,139,.12);color:var(--text-3)}.st-processing{background:rgba(6,182,212,.12);color:var(--cyan)}.st-done{background:rgba(16,185,129,.12);color:var(--green)}.st-err{background:rgba(239,68,68,.12);color:#f87171}
+</style>
