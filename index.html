@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>OCR Studio — Image to Text, PDF Text Extraction, Batch OCR, Table Detection | Universe Invedors</title>
+<title>OCR Studio ï¿½ Image to Text, PDF Text Extraction, Batch OCR, Table Detection | Universe Invedors</title>
 <meta name="description" content="Complete OCR platform. Image to text, PDF text extraction, batch processing, table detection, handwriting recognition. 15 languages, confidence scores, copy/download results. 100% browser-based."/>
 <meta name="keywords" content="OCR online free,image to text free,PDF text extractor,batch OCR tool,table detection OCR,handwriting recognition online,Tesseract.js"/>
 <link rel="canonical" href="https://ocr.universeinvedors.tech/"/><meta name="robots" content="index,follow"/><meta name="author" content="Universe Invedors"/>
-<meta property="og:title" content="OCR Studio — Image to Text, PDF Extract, Batch OCR, Table Detection"/><meta property="og:url" content="https://ocr.universeinvedors.tech/"/><meta property="og:type" content="website"/><meta property="og:image" content="https://universeinvedors.tech/og-image.jpg"/><meta property="og:site_name" content="Universe Invedors Tools"/>
+<meta property="og:title" content="OCR Studio ï¿½ Image to Text, PDF Extract, Batch OCR, Table Detection"/><meta property="og:url" content="https://ocr.universeinvedors.tech/"/><meta property="og:type" content="website"/><meta property="og:image" content="https://universeinvedors.tech/og-image.jpg"/><meta property="og:site_name" content="Universe Invedors Tools"/>
 <meta name="twitter:card" content="summary_large_image"/><meta name="twitter:image" content="https://universeinvedors.tech/og-image.jpg"/>
-<link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="https://universeinvedors.tech/favicon.ico" sizes="any"/><meta name="theme-color" content="#090c13"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="icon" href="https://universeinvedors.tech/favicon.ico" sizes="any"/>
+<link rel="manifest" href="/manifest.json"/><meta name="theme-color" content="#090c13"/>
 <meta name="google-adsense-account" content="ca-pub-8759032363251002"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759032363251002" crossorigin="anonymous"></script>
 <!-- Google Analytics 4 -->
@@ -113,7 +114,7 @@ input[type=range]{accent-color:var(--accent);width:100%}
     <button class="et" onclick="setMode('cleanup',this)">? Text Cleanup</button>
   </div>
   <div class="sp"></div>
-  <span class="badge-priv">?? 100% Local — No Upload</span>
+  <span class="badge-priv">?? 100% Local ï¿½ No Upload</span>
 </header>
 
 <div class="container">
@@ -130,7 +131,7 @@ input[type=range]{accent-color:var(--accent);width:100%}
     </select>
     <label style="display:flex;align-items:center;gap:.3rem;cursor:pointer"><input type="checkbox" id="preserve-layout" style="accent-color:var(--acc)"> Preserve layout</label>
     <label style="display:flex;align-items:center;gap:.3rem;cursor:pointer"><input type="checkbox" id="detect-tables" style="accent-color:var(--acc)"> Detect tables</label>
-    <label style="margin-left:auto;font-size:.72rem;color:var(--t3)">Tesseract.js v5 · WebAssembly</label>
+    <label style="margin-left:auto;font-size:.72rem;color:var(--t3)">Tesseract.js v5 ï¿½ WebAssembly</label>
   </div>
 
   <!-- SINGLE IMAGE MODE -->
@@ -142,16 +143,34 @@ input[type=range]{accent-color:var(--accent);width:100%}
       ondrop="event.preventDefault();this.classList.remove('drag');handleSingle(event.dataTransfer.files[0])">
       <div style="font-size:2.5rem;margin-bottom:.75rem">???</div>
       <h2 style="font-size:.95rem;font-weight:700;margin-bottom:.35rem">Drop an image here or click to browse</h2>
-      <p style="font-size:.8rem;color:var(--t2)">JPG, PNG, WEBP, GIF, BMP, TIFF · Higher resolution = better accuracy</p>
+      <p style="font-size:.8rem;color:var(--t2)">JPG, PNG, WEBP, GIF, BMP, TIFF ï¿½ Higher resolution = better accuracy</p>
       <p style="font-size:.72rem;color:var(--t3);margin-top:.35rem">?? Tip: Use images with clear, dark text on light background</p>
     </div>
     <input type="file" id="single-file" accept="image/*" style="display:none" onchange="handleSingle(this.files[0])">
     <div id="single-prog" class="prog-card" style="display:none">
-      <p id="single-msg" style="font-size:.82rem;color:var(--t2)">Initialising…</p>
+      <p id="single-msg" style="font-size:.82rem;color:var(--t2)">Initialisingï¿½</p>
       <div class="prog-bar"><div class="prog-fill" id="single-fill" style="width:0%"></div></div>
-      <p style="font-size:.7rem;color:var(--t3);margin-top:.25rem">Processing locally — your image never leaves your device</p>
+      <p style="font-size:.7rem;color:var(--t3);margin-top:.25rem">Processing locally ï¿½ your image never leaves your device</p>
     </div>
     <div id="single-result" style="display:none">
+<div style="display:flex;align-items:center;gap:.5rem;padding:.5rem .75rem;background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--r-md);margin-top:.65rem;flex-wrap:wrap">
+  <span style="font-size:.72rem;color:var(--text-3);font-weight:700">Open result in ?</span>
+  <button class="btn bg bsm" onclick="sendToText()" title="Continue editing in Text Tools">Text Tools</button>
+  <button class="btn bg bsm" onclick="sendToPDF()" title="Convert to PDF">PDF Suite</button>
+</div>
+<script>
+function sendToText(){
+  var t=document.getElementById('single-out')||document.getElementById('cleanup-out')
+  if(!t||!t.value.trim()){toast('Extract text first','err');return}
+  localStorage.setItem('ui_incoming_text',t.value)
+  window.open('https://text.universeinvedors.tech?from=ocr','_blank')
+  toast('Opening Text Tools…','ok')
+}
+function sendToPDF(){
+  toast('PDF Suite is at pdf.universeinvedors.tech','info')
+  setTimeout(function(){window.open('https://pdf.universeinvedors.tech','_blank')},800)
+}
+</script>
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem">
         <h2 id="single-title" style="font-size:.9rem;font-weight:700;color:var(--acc-h)">Extracted Text</h2>
         <div style="display:flex;gap:.35rem;flex-wrap:wrap">
@@ -169,8 +188,8 @@ input[type=range]{accent-color:var(--accent);width:100%}
         <span>Words: <span class="stat-val" id="sw">0</span></span>
         <span>Characters: <span class="stat-val" id="sc">0</span></span>
         <span>Lines: <span class="stat-val" id="sl">0</span></span>
-        <span>Confidence: <span class="stat-val" id="sconf">—</span></span>
-        <span>Language: <span class="stat-val" id="slang">—</span></span>
+        <span>Confidence: <span class="stat-val" id="sconf">ï¿½</span></span>
+        <span>Language: <span class="stat-val" id="slang">ï¿½</span></span>
       </div>
     </div>
     <div id="single-err" style="display:none;padding:.85rem;border-radius:var(--r);background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);color:#f87171;font-size:.82rem;margin-top:.75rem"></div>
@@ -216,7 +235,7 @@ input[type=range]{accent-color:var(--accent);width:100%}
     </div>
     <input type="file" id="pdf-file" accept="application/pdf" style="display:none" onchange="handlePDF(this.files[0])">
     <div id="pdf-prog" class="prog-card" style="display:none">
-      <p id="pdf-msg" style="font-size:.82rem;color:var(--t2)">Loading PDF…</p>
+      <p id="pdf-msg" style="font-size:.82rem;color:var(--t2)">Loading PDFï¿½</p>
       <div class="prog-bar"><div class="prog-fill" id="pdf-fill" style="width:0%"></div></div>
     </div>
     <div id="pdf-result" style="display:none">
@@ -247,12 +266,12 @@ input[type=range]{accent-color:var(--accent);width:100%}
     <div class="cleanup-area">
       <div class="cleanup-col">
         <div class="cltitle">Input (paste OCR text)</div>
-        <textarea class="cltextarea" id="cleanup-in" placeholder="Paste your OCR output here…"></textarea>
+        <textarea class="cltextarea" id="cleanup-in" placeholder="Paste your OCR output hereï¿½"></textarea>
       </div>
       <div style="display:flex;align-items:center;justify-content:center;padding:0 .5rem;color:var(--t3);font-size:1.2rem">?</div>
       <div class="cleanup-col">
         <div class="cltitle">Cleaned Output</div>
-        <textarea class="cltextarea" id="cleanup-out" placeholder="Cleaned text will appear here…" readonly></textarea>
+        <textarea class="cltextarea" id="cleanup-out" placeholder="Cleaned text will appear hereï¿½" readonly></textarea>
       </div>
     </div>
     <div style="display:flex;gap:.4rem;margin-top:.6rem">
@@ -265,7 +284,7 @@ input[type=range]{accent-color:var(--accent);width:100%}
   <div class="info-sect">
     <h2>OCR Studio capabilities</h2>
     <ul>
-      <li><strong>Image OCR:</strong> Extract text from any image — photos, screenshots, scanned documents</li>
+      <li><strong>Image OCR:</strong> Extract text from any image ï¿½ photos, screenshots, scanned documents</li>
       <li><strong>Batch OCR:</strong> Process multiple images at once and download combined results</li>
       <li><strong>PDF Extract:</strong> Render PDF pages and OCR each one with Tesseract.js</li>
       <li><strong>Text Cleanup:</strong> Remove OCR artefacts, normalise spacing, fix common substitutions</li>
@@ -282,7 +301,7 @@ input[type=range]{accent-color:var(--accent);width:100%}
     <a href="https://image.universeinvedors.tech">Image</a><a href="https://3d.universeinvedors.tech">3D</a>
     <a href="https://map.universeinvedors.tech">Maps</a><a href="https://media.universeinvedors.tech">Media</a>
   </div>
-  <span>© 2024 Universe Invedors · Tesseract.js · PDF.js · OCR in Browser · Free</span>
+  <span>ï¿½ 2024 Universe Invedors ï¿½ Tesseract.js ï¿½ PDF.js ï¿½ OCR in Browser ï¿½ Free</span>
 </footer>
 <div class="toasts" id="toasts"></div>
 
@@ -324,13 +343,13 @@ async function handleSingle(file){
 }
 
 async function runOCR(source, fillId, msgId){
-  // Load Tesseract.js as UMD script (not ESM — ESM path is unreliable on CDN)
+  // Load Tesseract.js as UMD script (not ESM ï¿½ ESM path is unreliable on CDN)
   if(!window.Tesseract){
     await new Promise(function(resolve,reject){
       var s=document.createElement('script')
       s.src='https://cdn.jsdelivr.net/npm/tesseract.js@5.0.5/dist/tesseract.min.js'
       s.onload=resolve
-      s.onerror=function(){reject(new Error('Could not load Tesseract.js')}
+      s.onerror=function(){reject(new Error('Could not load Tesseract.js'))}
       document.head.appendChild(s)
     })
   }
@@ -340,14 +359,14 @@ async function runOCR(source, fillId, msgId){
     logger:function(m){
       if(m.status==='recognizing text'){
         var pct=Math.round(m.progress*100)
-        document.getElementById(msgId).textContent='Recognising… '+pct+'%'
+        document.getElementById(msgId).textContent='Recognisingï¿½ '+pct+'%'
         document.getElementById(fillId).style.width=pct+'%'
       } else { document.getElementById(msgId).textContent=m.status }
     }
   })
   var result=await worker.recognize(source)
   await worker.terminate()
-  document.getElementById('sconf').textContent=result.data.confidence?result.data.confidence.toFixed(1)+'%':'—'
+  document.getElementById('sconf').textContent=result.data.confidence?result.data.confidence.toFixed(1)+'%':'ï¿½'
   return result.data.text
 }
 
@@ -375,7 +394,7 @@ async function runBatch(){
   batchResults=[]
   for(let i=0;i<batchFiles.length;i++){
     const bs=document.getElementById('bs-'+i)
-    bs.className='batch-status st-processing'; bs.textContent='Processing…'
+    bs.className='batch-status st-processing'; bs.textContent='Processingï¿½'
     try {
       const text=await runOCR(batchFiles[i],'single-fill','single-msg')
       batchResults[i]=text
@@ -409,7 +428,7 @@ async function handlePDF(file){
     const pdf=await getDocument({data:buf}).promise
     let allText=''
     for(let p=1;p<=pdf.numPages;p++){
-      document.getElementById('pdf-msg').textContent=`OCR page ${p}/${pdf.numPages}…`
+      document.getElementById('pdf-msg').textContent=`OCR page ${p}/${pdf.numPages}ï¿½`
       document.getElementById('pdf-fill').style.width=Math.round(p/pdf.numPages*100)+'%'
       const page=await pdf.getPage(p)
       const vp=page.getViewport({scale:2})
@@ -463,12 +482,15 @@ function toast(msg,type=''){
   document.getElementById('toasts').appendChild(el); setTimeout(()=>el.remove(),2800)
 }
 </script>
+<script>
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(function(){})}
+</script>
 </body>
 </html>
 <script>
-// GA4 Custom Events — OCR Tool
+// GA4 Custom Events ï¿½ OCR Tool
 (function(){
-  // Track file uploads — main entry point
+  // Track file uploads ï¿½ main entry point
   var fileInput=document.querySelector('input[type="file"]');
   if(fileInput){
     fileInput.addEventListener('change',function(){
@@ -482,7 +504,7 @@ function toast(msg,type=''){
       gaEvent('ocr_language_selected','OCR Tool',this.value);
     });
   });
-  // Track OCR start — highest value event
+  // Track OCR start ï¿½ highest value event
   document.querySelectorAll('button').forEach(function(btn){
     var t=btn.textContent.trim().toLowerCase();
     if(t.includes('extract')||t.includes('recogni')||t.includes('start')||t.includes('ocr')||t.includes('scan')){
