@@ -111,10 +111,10 @@ input[type=range]{accent-color:var(--accent);width:100%}
   </a>
   <div class="topbar-sep"></div>
   <div class="etabs">
-    <button class="et active" onclick="setMode('single',this)">?? Image OCR</button>
-    <button class="et" onclick="setMode('batch',this)">?? Batch OCR</button>
-    <button class="et" onclick="setMode('pdf',this)">?? PDF Extract</button>
-    <button class="et" onclick="setMode('cleanup',this)">? Text Cleanup</button>
+    <button class="et active" onclick="setMode('single',this)">Image OCR</button>
+    <button class="et" onclick="setMode('batch',this)">Batch OCR</button>
+    <button class="et" onclick="setMode('pdf',this)">PDF Extract</button>
+    <button class="et" onclick="setMode('cleanup',this)">Text Cleanup</button>
   </div>
   <div class="sp"></div>
   <span class="badge-priv">?? 100% Local � No Upload</span>
@@ -148,7 +148,7 @@ input[type=range]{accent-color:var(--accent);width:100%}
       <div style="font-size:2.5rem;margin-bottom:.75rem">???</div>
       <h2 style="font-size:.95rem;font-weight:700;margin-bottom:.35rem">Drop an image here or click to browse</h2>
       <p style="font-size:.8rem;color:var(--t2)">JPG, PNG, WEBP, GIF, BMP, TIFF � Higher resolution = better accuracy</p>
-      <p style="font-size:.72rem;color:var(--t3);margin-top:.35rem">?? Tip: Use images with clear, dark text on light background</p>
+      <p style="font-size:.72rem;color:var(--t3);margin-top:.35rem">Tip: Use images with clear, dark text on light background</p>
     </div>
     <input type="file" id="single-file" accept="image/*" style="display:none" onchange="handleSingle(this.files[0])">
     <div id="single-prog" class="prog-card" style="display:none">
@@ -213,8 +213,8 @@ function sendToPDF(){
     <input type="file" id="batch-file" accept="image/*" multiple style="display:none" onchange="handleBatch(this.files)">
     <div id="batch-list" class="batch-list"></div>
     <div id="batch-actions" style="display:none;margin-top:.75rem;display:flex;gap:.5rem;flex-wrap:wrap">
-      <button class="btn bp" onclick="runBatch()">? Process All</button>
-      <button class="btn bg bsm" onclick="downloadAllTXT()">? Download All .txt</button>
+      <button class="btn bp" onclick="runBatch()">Process All</button>
+      <button class="btn bg bsm" onclick="downloadAllTXT()">Download All .txt</button>
       <button class="btn bg bsm" onclick="clearBatch()">Clear</button>
     </div>
     <div id="batch-combined" style="display:none;margin-top:1.25rem">
@@ -264,8 +264,8 @@ function sendToPDF(){
       <button class="btn bg bsm" onclick="cleanup('remove-special')">Remove special chars</button>
       <button class="btn bg bsm" onclick="cleanup('fix-newlines')">Fix line breaks</button>
       <button class="btn bg bsm" onclick="cleanup('numbers')">Fix 0?O, l?1</button>
-      <button class="btn bg bsm" onclick="cleanup('markdown')">? Markdown</button>
-      <button class="btn bp bsm" onclick="cleanup('all')">? Clean All</button>
+      <button class="btn bg bsm" onclick="cleanup('markdown')">Markdown</button>
+      <button class="btn bp bsm" onclick="cleanup('all')">Clean All</button>
     </div>
     <div class="cleanup-area">
       <div class="cleanup-col">
@@ -280,7 +280,7 @@ function sendToPDF(){
     </div>
     <div style="display:flex;gap:.4rem;margin-top:.6rem">
       <button class="btn bg bsm" onclick="copyResult('cleanup-out')">Copy Result</button>
-      <button class="btn bg bsm" onclick="downloadTXT('cleanup-out','cleaned-text')">? Download</button>
+      <button class="btn bg bsm" onclick="downloadTXT('cleanup-out','cleaned-text')">Download</button>
       <button class="btn bg bsm" onclick="document.getElementById('cleanup-in').value='';document.getElementById('cleanup-out').value=''">Clear</button>
     </div>
   </div>
